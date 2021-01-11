@@ -1,8 +1,25 @@
 /**
- * Custom palette here.
+ * Custom variables & mixins here
  *
  * ref：https://v1.vuepress.vuejs.org/zh/config/#palette-styl
  */
 
+// Default variables overwrite
 $accentColor = #DB420F
 $textColor = #000000
+
+// Custom variables
+$lightBeige = #eae5da
+$darkBeige = #e3ded3
+
+$MQsm = 576px
+$MQmd = 768px
+$MQlg = 992px
+$MQxl = 1200px
+
+// Font setup
+default-font-family()
+  font-family 'Roboto', sans-serif
+  
+secondary-font-family()
+  font-family 'Oswald', 'Roboto', sans-serif

@@ -1,6 +1,5 @@
-const { description } = require('../../package')
-
 module.exports = {
+  base: '/bspk/',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
@@ -18,7 +17,9 @@ module.exports = {
   head: [
     ['meta', { name: 'theme-color', content: '#DB420F' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com"'}],
+    ['link', { href: 'https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@400;500;700&display=swap', rel: 'stylesheet'}]
   ],
 
   /**
@@ -38,5 +39,11 @@ module.exports = {
         link: '/contact/'
       }
     ]
+  },
+  plugins: {
+    'robots': {
+      host: "https://domagalahanna.github.io/bspk/",
+      disallowAll: true
+    }
   }
 }

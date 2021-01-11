@@ -18,5 +18,8 @@
   "devDependencies": {
     "nodemon": "^2.0.7",
     "vuepress": "^1.5.3"
+  },
+  "dependencies": {
+    "vuepress-plugin-robots": "^1.0.1"
   }
 }

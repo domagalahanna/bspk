@@ -1,5 +1,44 @@
 /**
- * Custom Styles here.
+ * Custom global styles here.
  *
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
+
+*, *::before, *::after
+  box-sizing border-box
+
+body
+  overflow-x hidden
+  margin 0
+  default-font-family()
+  background-color $lightBeige
+
+  @media (min-width $MQxl)
+    background-position center center
+    background-size 1200px
+    background-image linear-gradient( 90deg, $darkBeige, $darkBeige 1px, $lightBeige 1px, $lightBeige 401px, $darkBeige 401px, $darkBeige 402px, $lightBeige 402px, $lightBeige 803px, $darkBeige 803px, $darkBeige 804px, $lightBeige 804px)
+
+h1, h2, h3, h4
+  font-size inherit
+  margin-bottom inherit
+  margin-top inherit
+
+address
+  font-style normal
+
+a
+  text-decoration none
+  color inherit
+
+ul
+  list-style none 
+  margin 0
+  padding 0
+
+  li
+    padding 0
+
+.container
+  @media (min-width $MQxl)
+    max-width $MQxl
+    margin 0 auto
