@@ -40,7 +40,7 @@
         <a href="#">Terms of use</a>
       </nav>
       <div class="copyrights__copy">
-        ©2020 BSPK Inc. All rights reserved.
+        ©2021 BSPK Inc. All rights reserved.
       </div>
     </div>
   </footer>
@@ -48,7 +48,7 @@
 
 <style lang="stylus" scoped>
 .footer
-  padding 40px 50px   
+  padding 50px 37px   
   position relative
   font-size 18px
 
@@ -67,7 +67,7 @@
     margin-top 40px
 
     .footer__contact
-      width 60%
+      width 50%
 
     .footer__socials
       width 30%

@@ -1,5 +1,5 @@
 /**
- * Custom global styles here.
+ * Custom global styles & resets here.
  *
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
@@ -30,6 +30,23 @@ a
   text-decoration none
   color inherit
 
+button
+  border none
+  margin 0
+  padding 0
+  width auto
+  overflow visible
+  background transparent
+  color inherit
+  font inherit
+  line-height normal
+  -webkit-font-smoothing inherit
+  -moz-osx-font-smoothing inherit
+  -webkit-appearance none
+
+  &:hover, &:active
+    outline none
+
 ul
   list-style none 
   margin 0
@@ -37,6 +54,20 @@ ul
 
   li
     padding 0
+
+img
+  max-width 100% 
+
+.sr-only
+  position absolute
+  width 1px
+  height 1px
+  padding 0
+  margin -1px
+  overflow hidden
+  clip rect(0,0,0,0)
+  white-space nowrap
+  border 0
 
 .container
   @media (min-width $MQxl)
