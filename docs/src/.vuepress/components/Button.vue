@@ -3,6 +3,7 @@
     :is="link ? 'a' : 'button'"
     :href="link"
     class="button"
+    :class="{ 'button--large' : size === 'large' }"
   >
     <slot/>
   </component>
@@ -11,7 +12,8 @@
 <script>
 export default {
   props: {
-    link: String
+    link: String,
+    size: String
   }
 }
 </script>
@@ -26,12 +28,20 @@ export default {
   letter-spacing 1px
   border-radius 6px
   border none
-  padding 17px 30px
+  padding 20px 40px
   background $black
   transition background-color .4s ease-in-out
+  display inline-block
 
   &:hover
     cursor pointer
     background-color alpha($black, 0.75)
     transition background-color .4s ease-in-out
+
+  @media (min-width $MQlg)
+    padding 17px 30px
+
+    &--large
+      padding 26px 41px
+      font-size 15px
 </style>

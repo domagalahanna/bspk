@@ -22,6 +22,7 @@ h1, h2, h3, h4
   font-size inherit
   margin-bottom inherit
   margin-top inherit
+  font-weight inherit
 
 address
   font-style normal
@@ -73,3 +74,14 @@ img
   @media (min-width $MQxl)
     max-width $MQxl
     margin 0 auto
+
+.c-scrollbar
+  z-index: 1000
+
+@keyframes slide-up
+  0% 
+    opacity: 0;
+    transform: translateY(100%);
+  100% 
+    opacity: 1;
+    transform: translateY(0);

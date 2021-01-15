@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" data-scroll>
     <div class="footer__content">
       <div class="footer__logo">
         <img :src="$withBase('images/logo.svg')" alt="BSPK">
@@ -46,6 +46,51 @@
   </footer>
 </template>
 
+<script>
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+export default {
+  data: () => ({
+    locomotiveScroll: null,
+    scrollInstance: null
+  }),
+  mounted() {
+    if(!this.locomotiveScroll) {
+      import('locomotive-scroll').then(module => {
+        this.locomotiveScroll = module.default;
+        this.initLocoScroll();
+        this.$nextTick(() => this.scrollInstance.update());
+      });
+    } else {
+      this.initLocoScroll();
+      this.$nextTick(() => this.scrollInstance.update());
+    }
+  },
+  methods: {
+    initLocoScroll() {
+      this.scrollInstance = new this.locomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        smoothMobile: true,
+        getDirection: true,
+        repeat: true,
+        reloadOnContextChange: true
+      });
+
+      this.scrollInstance.on('scroll', scrollData => {
+        this.$root.$emit('body-scroll', scrollData)
+      });
+
+      this.scrollInstance.on('call', action => {
+        if (action === "playVideo") {
+          document.getElementById('videoElement').play()
+        }
+      })
+    }
+  }
+}
+</script>
+
 <style lang="stylus" scoped>
 .footer
   padding 50px 37px   
@@ -59,6 +104,7 @@
 
   &__title
     margin-bottom 5px
+    font-weight 600
 
   &__nav
     display flex
@@ -127,11 +173,12 @@
     display flex
     justify-content space-between
     font-weight 500
-    font-size 16px
+    font-size 13px
 
     &__copy
       margin-top 0
       opacity 1
+      font-size 13px
 
     a
       margin-right 20px

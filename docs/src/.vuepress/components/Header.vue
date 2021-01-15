@@ -16,7 +16,10 @@
         Request a demo
       </Button>
     </div>
-    <Hamburger :isOpen="isOffcanvasOpen" @toggle-offcanvas="toggleOffcanvas"/>
+    <Hamburger 
+      :isOpen="isOffcanvasOpen"
+      @toggle-offcanvas="toggleOffcanvas"
+    />
   </header>
 </template>
 
@@ -28,35 +31,33 @@ export default {
   data: () => ({
     isScrolled: false,
     isHidden: false,
-    prevScroll: 0
   }),
-  mounted () {
-    window.addEventListener('scroll', this.toggleVisibility);
-  },
-  unmounted () {
-    window.removeEventListener('scroll', this.toggleVisibility);
+  mounted() {
+    this.$root.$on('body-scroll', this.toggleVisibility);
   },
   methods: {
-    hidePicker: function() {
-      this.$refs.picker.hideContainer()
+    hidePicker() {
+      if(this.$refs.picker) {
+        this.$refs.picker.hideContainer()
+      }
     },
-    toggleVisibility: function() {
+    toggleVisibility(scrollData) {
       if (this.isOffcanvasOpen && window.innerWidth < 992) {
         return;
       }
+      const { direction, scroll } = scrollData
 
-      const windowScrollTop = window.scrollY;
-      const wasScrolledDown = this.prevScroll < windowScrollTop;
+      const scrollTop = scroll.y;
+      const wasScrolledDown = direction === "down";
 
-      this.prevScroll = windowScrollTop;
-      this.isScrolled = windowScrollTop > 200 ? true : false;
+      this.isScrolled = scrollTop > 200;
       this.isHidden = this.isScrolled && wasScrolledDown;
 
       if(this.isHidden) {
         this.hidePicker()
       }
     },
-    toggleOffcanvas: function() {
+    toggleOffcanvas() {
       this.$emit('toggle-offcanvas')
     }
   }
