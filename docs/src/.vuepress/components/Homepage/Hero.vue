@@ -54,6 +54,10 @@
 
       video 
         width 100%
+
+  @media (max-width 360px)
+    &__copy
+      padding 35px 20px 55px 
   
   @media (min-width $MQxl)
     overflow hidden

@@ -26,11 +26,46 @@ solutions:
       - "user journeys"
     highlighted: "beyond"
     headlineSecondPart: "imagination"
+    copy: "We power superior digital customer engagement."
+    numbers: "50%"
+    description: "upselling rate increase"
+    image:
+      mobile:
+        src: "images/homepage/WorkingMan.jpg"
+        alt: "Man working on a laptop"
+      desktop:
+        src: "images/homepage/WorkingManDesktop.jpg"
+        alt: "Man working on a laptop"
   - headlineFirstPart:
       - "Emotion-based"
       - "conversions"
     highlighted: " beyond"
-    headlineSecondPart: "expactations"
+    headlineSecondPart: "expectations"
+    copy: "We empower customers with informed recommendations."
+    numbers: "2X"
+    description: "uplift in sales conversions"
+    image:
+      mobile:
+        src: "images/homepage/WomanOnThePhone.jpg"
+        alt: "Woman on the phone"
+      desktop:
+        src: "images/homepage/ManWithCoffeeDesktop.jpg"
+        alt: "Woman on the phone"
+  - headlineFirstPart:
+      - "Loyalty-building"
+      - "curations"
+    highlighted: " beyond"
+    headlineSecondPart: "ambitions"
+    copy: "We empower brands with actionnable customer knowledge."
+    numbers: "3X"
+    description: "growth in customer retention"
+    image:
+      mobile:
+        src: "images/homepage/ShoesAccessories.jpg"
+        alt: "Shoes and belt"
+      desktop:
+        src: "images/homepage/ShoesAccessoriesDesktop.jpg"
+        alt: "Shoes and belt"
 ---
 
 <Homepage-Hero/>

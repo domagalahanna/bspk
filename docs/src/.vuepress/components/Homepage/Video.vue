@@ -10,6 +10,7 @@
         width="100%"
         loop
         muted
+        playsinline
       >
       </video>
   </div>

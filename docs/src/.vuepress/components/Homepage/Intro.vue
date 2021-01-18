@@ -18,7 +18,7 @@
   font-weight 400
   line-height 27px
   text-align center
-  color #423F3A
+  color $darkGrey
 
   @media (min-width $MQlg)
     padding 185px 45px

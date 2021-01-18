@@ -47,46 +47,13 @@
 </template>
 
 <script>
-import 'locomotive-scroll/dist/locomotive-scroll.css';
-
 export default {
-  data: () => ({
-    locomotiveScroll: null,
-    scrollInstance: null
-  }),
   mounted() {
-    if(!this.locomotiveScroll) {
-      import('locomotive-scroll').then(module => {
-        this.locomotiveScroll = module.default;
-        this.initLocoScroll();
-        this.$nextTick(() => this.scrollInstance.update());
-      });
-    } else {
-      this.initLocoScroll();
-      this.$nextTick(() => this.scrollInstance.update());
-    }
-  },
-  methods: {
-    initLocoScroll() {
-      this.scrollInstance = new this.locomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-        smoothMobile: true,
-        getDirection: true,
-        repeat: true,
-        reloadOnContextChange: true
-      });
-
-      this.scrollInstance.on('scroll', scrollData => {
-        this.$root.$emit('body-scroll', scrollData)
-      });
-
-      this.scrollInstance.on('call', action => {
-        if (action === "playVideo") {
-          document.getElementById('videoElement').play()
-        }
-      })
-    }
+    this.$root.$emit('update-locoscroll');
+    
+    setTimeout(() => {
+      this.$root.$emit('update-locoscroll');
+    }, 500)
   }
 }
 </script>

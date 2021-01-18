@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="25px" height="14px" viewbox="0 0 25 14" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="arrow" transform="translate(1 1)">
+    <path d="M8.32667e-17 0.461538L22.1538 0.461538" transform="translate(0 5.272217)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#DB420F" stroke-width="2" stroke-linecap="square" />
+    <g id="Group" transform="translate(16.881744 0)">
+      <path d="M0 0.5L7.38462 0.5" transform="matrix(0.70710677 0.70710677 -0.70710677 0.70710677 0.8654785 0)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#DB420F" stroke-width="2" stroke-linecap="square" />
+      <path d="M0 0.5L7.38462 0.5" transform="matrix(-0.7071067 0.7071068 0.7071068 0.7071067 5.22171 5.538574)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#DB420F" stroke-width="2" stroke-linecap="square" />
+    </g>
+  </g>
+</svg>

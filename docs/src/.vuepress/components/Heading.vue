@@ -1,8 +1,8 @@
 <template>
   <component
     :is="tag" 
-    class="heading heading--h1"
-    :class="{ 'heading--break' :  breakLine}"
+    class="heading"
+    :class="[ `heading--${tag}`, { 'heading--break' :  breakLine}]"
   >
     <span 
       v-for="headline in firstPartHeadlines"
@@ -52,11 +52,8 @@ export default {
       &__inner
         animation-name slide-up
         animation-timing-function ease-in-out
-        animation-duration .4s
+        animation-duration .5s
         animation-fill-mode forwards
-        transform translateY(0)
-        opacity 1
-        transition transform .4s ease-in-out, opacity .6s ease-in-out
 
 .heading
   secondary-font-family()
@@ -70,6 +67,7 @@ export default {
 
     &__inner
       display inline-block
+      opacity 0
 
   &__highlighted
     color $accentColor
@@ -77,6 +75,10 @@ export default {
   &--h1
     font-size 35px
     line-height 40px
+
+  &--h2
+    font-size 35px
+    line-height 37px
 
   &--break
     .heading__highlighted
@@ -90,4 +92,8 @@ export default {
       letter-spacing -2px
       font-size 58px
       line-height 62px
+
+    &--h2
+      font-size 48px
+      line-height 48px
 </style>

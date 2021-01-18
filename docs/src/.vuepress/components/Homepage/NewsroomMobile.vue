@@ -1,5 +1,5 @@
 <template>
-  <section class="testimonials" data-scroll>
+  <section class="testimonials">
     <Carousel
       class="testimonials__wrapper"
       :per-page="1"
