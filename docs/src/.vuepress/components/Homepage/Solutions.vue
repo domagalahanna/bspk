@@ -37,6 +37,7 @@
               :data-visual-id="index"
               muted=""
               playsinline=""
+              loop=""
               class="screen__video"
             ></video>
           </div>
@@ -158,11 +159,13 @@
       padding-left 10px
 
     &__counter
+      secondary-font-family()
+      font-weight 600
       display block
-      color #E2DCCD
+      color $darkBeige
       font-size 120px
       line-height 1
-      margin-bottom -15px
+      margin-left -5px
 
     &__cta
       justify-content flex-start
@@ -181,6 +184,47 @@
         right auto
         left -40px
 
+    &:first-child
+      .visuals
+        &::before
+          content ''
+          display block
+          position absolute
+          z-index -1
+          width 160px
+          height 160px
+          background alpha(#3F6EE8, 0.1)
+          border-radius 50%
+          bottom -55px
+          right 130px
+
+    &:nth-child(2)
+      .visuals
+        &::before
+          content ''
+          display block
+          position absolute
+          z-index -1
+          width 200px
+          height 200px
+          background alpha($accentColor, 0.16)
+          border-radius 50%
+          bottom -60px
+          left 190px
+
+    &:nth-child(3)
+      .visuals
+        &::before
+          content ''
+          display block
+          position absolute
+          z-index -1
+          width 477px
+          height 477px
+          background $darkBeige
+          border-radius 50%
+          top -90px
+          left -156px
 .heading
  & > :first-child,
  & > :nth-child(2)

@@ -1,49 +1,53 @@
 <template>
-  <footer class="footer" data-scroll>
-    <div class="footer__content">
-      <div class="footer__logo">
-        <img :src="$withBase('images/logo.svg')" alt="BSPK">
-      </div>
-      <nav class="footer__nav">
-        <div class="footer__contact">
-          <h2 class="footer__title">
-            Contact
-          </h2>
-          <address>
-            Menlo Park, California, USA<br>
-            +1 415-915-2775<br>
-            contact@bspk.com<br>
-          </address>
-        </div>
-        <div class="footer__socials">
-          <h2 class="footer__title">
-            Find us
-          </h2>
-          <ul>
-            <li>
-              <a href="#" target="_blank">Twitter</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">LinkedIn</a>
-            </li>
-            <li>
-              <a href="#" target="_blank">Facebook</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <div class="footer-wrapper">
+    <div class="footer-circle">
     </div>
-    <div class="copyrights">
-      <nav>
-        <a href="#">Privacy</a>
-        <span class="divider">—</span>
-        <a href="#">Terms of use</a>
-      </nav>
-      <div class="copyrights__copy">
-        ©2021 BSPK Inc. All rights reserved.
+    <footer class="footer" data-scroll>
+      <div class="footer__content">
+        <div class="footer__logo">
+          <img :src="$withBase('images/logo.svg')" alt="BSPK">
+        </div>
+        <nav class="footer__nav">
+          <div class="footer__contact">
+            <h2 class="footer__title">
+              Contact
+            </h2>
+            <address>
+              Menlo Park, California, USA<br>
+              +1 415-915-2775<br>
+              contact@bspk.com<br>
+            </address>
+          </div>
+          <div class="footer__socials">
+            <h2 class="footer__title">
+              Find us
+            </h2>
+            <ul>
+              <li>
+                <a href="#" target="_blank">Twitter</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">LinkedIn</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">Facebook</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </div>
-  </footer>
+      <div class="copyrights">
+        <nav>
+          <a href="#">Privacy</a>
+          <span class="divider">—</span>
+          <a href="#">Terms of use</a>
+        </nav>
+        <div class="copyrights__copy">
+          ©2021 BSPK Inc. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
@@ -90,19 +94,6 @@ export default {
     border-top 1px solid $darkBeige
     padding 110px 100px 60px
     font-size 1rem
-    overflow-x hidden
-
-    &::before
-      content ''
-      position absolute
-      width 549px
-      height 555px
-      border-radius 50%
-      border 1px solid $darkBeige
-      top -140px
-      right 0
-      transform translate(100px, 0)
-      z-index -1
 
     &__content
       display flex
@@ -159,4 +150,23 @@ export default {
 
   @media (min-width $MQlg)
     display none
+
+.footer-circle
+  @media (min-width $MQlg)
+    height 130px
+    position relative
+
+    &::before
+      content ''
+      position absolute
+      width 549px
+      height 555px
+      border-radius 50%
+      border 1px solid $darkBeige
+      top 0
+      right -110px
+      z-index -1
+
+.footer-wrapper
+  overflow hidden
 </style>
