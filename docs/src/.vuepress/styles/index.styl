@@ -76,7 +76,38 @@ img
     margin 0 auto
 
 .c-scrollbar
-  z-index: 1000
+  z-index 1000
+
+.input
+  default-font-family()
+  background none
+  outline none
+  box-shadow none
+  border none
+  border-bottom 1px solid black
+  text-transform uppercase
+  padding 10px 0
+  font-size 15px
+  line-height 17px
+  font-weight 500
+
+  &:active, &:focus
+    &::placeholder
+      opacity 0.6
+      transition opacity .2s ease-in-out
+
+  &::placeholder
+    transition opacity .2s ease-in-out
+    color $black
+
+  &--full
+    width 100%
+
+  &--submit
+    cursor pointer
+
+  @media (min-width $MQlg)
+    padding 3px 0
 
 @keyframes slide-up
   0% 

@@ -52,7 +52,7 @@ export default {
       &__inner
         animation-name slide-up
         animation-timing-function ease-in-out
-        animation-duration .5s
+        animation-duration .6s
         animation-fill-mode forwards
 
 .heading

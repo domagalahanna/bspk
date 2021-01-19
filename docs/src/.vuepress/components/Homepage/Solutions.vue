@@ -9,7 +9,6 @@
         class="solution__visuals visuals"
         data-scroll
         data-scroll-speed="1"
-        :data-scroll-call="`playVisual${index}`"
       >
         <img 
           :src="$withBase(solution.image.mobile.src)"
@@ -21,7 +20,12 @@
           :alt="solution.image.desktop.alt"
           class="visuals__image visuals__image--desktop"
         >
-        <div class="screen">
+        <div 
+          v-if="index !== 2"
+          class="screen"
+          data-scroll
+          :data-scroll-call="`playVisual${index}`"
+        >
           <img 
             :src="$withBase('images/iphonex2vs.png')"
             alt=""
@@ -31,7 +35,8 @@
             <video 
               :src="$withBase('videos/BSPK_Mobile_Consultant.mp4')"
               :data-visual-id="index"
-              playsinline
+              muted=""
+              playsinline=""
               class="screen__video"
             ></video>
           </div>
@@ -79,7 +84,10 @@
 
 <style lang="stylus" scoped>
 .container
-  padding-bottom 160px
+  padding-bottom 85px
+
+  @media (min-width $MQlg)
+    padding-bottom 160px
 
 .solution
   padding 100px 37px 0
@@ -136,9 +144,12 @@
     display flex
     justify-content flex-end
 
+    &__copy
+      font-size 22px
+
     &__content
       text-align left
-      width 50%
+      width 45%
       height 550px
       display flex
       flex-direction column
