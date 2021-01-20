@@ -36,6 +36,18 @@
   </section>
 </template>
 
+<script>
+export default {
+  mounted() {
+    this.$root.$emit('update-locoscroll');
+    
+    setTimeout(() => {
+      this.$root.$emit('update-locoscroll');
+    }, 500)
+  }
+}
+</script>
+
 <style lang="stylus" scoped>
 .newsletter
   display flex

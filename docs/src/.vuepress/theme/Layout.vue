@@ -1,5 +1,7 @@
 <template>
   <div :class="$frontmatter.title.toLowerCase()">
-    <Content/>
+    <transition name="slide-fade">
+      <Content/>
+    </transition>
   </div>
 </template>

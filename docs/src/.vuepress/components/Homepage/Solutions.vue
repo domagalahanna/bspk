@@ -67,16 +67,16 @@
             {{ solution.description }}
           </span>
         </div>
-        <a 
+        <router-link 
           class="solution__more"
-          href="contact/"
+          to="contact/"
         >
           Learn More
           <img 
             :src="$withBase('images/icons/arrow.svg')"
             alt=""
           >
-        </a>
+        </router-link>
       </div>
       </div>
     </article>

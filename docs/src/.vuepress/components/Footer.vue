@@ -5,7 +5,7 @@
     <footer class="footer" data-scroll>
       <div class="footer__content">
         <div class="footer__logo">
-          <img :src="$withBase('images/logo.svg')" alt="BSPK">
+          <img :src="$withBase('/images/logo.svg')" alt="BSPK">
         </div>
         <nav class="footer__nav">
           <div class="footer__contact">

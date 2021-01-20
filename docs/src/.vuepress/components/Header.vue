@@ -3,13 +3,13 @@
     class="header"
     :class="{ 'header--hidden' : isHidden }"
   >
-    <a href="/">
+    <router-link to="/">
       <img 
-        :src="$withBase('images/logo.svg')"
+        :src="$withBase('/images/logo.svg')"
         class="header__logo"
         alt="BSPK"
       >
-    </a>
+    </router-link>
     <div class="header__buttons">
       <LanguagePicker ref="picker"/>
       <Button link="/contact/">

@@ -1,7 +1,7 @@
 <template>
   <component
-    :is="link ? 'a' : 'button'"
-    :href="link"
+    :is="link ? 'router-link' : 'button'"
+    :to="link"
     class="button"
     :class="{ 'button--large' : size === 'large' }"
   >

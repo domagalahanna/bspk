@@ -1,7 +1,7 @@
 <template>
   <div class="language-picker">
     <img 
-      :src="$withBase('images/flags/us.png')"
+      :src="$withBase('/images/flags/us.png')"
       class="language-picker__image"
     >
     <button
@@ -10,16 +10,16 @@
       @click="toggleVisibility"
     >
       <img 
-        :src="$withBase('images/icons/down-chevron.svg')"
+        :src="$withBase('/images/icons/down-chevron.svg')"
       >
     </button>
     <div 
       class="language-picker__container languages-container"
       :class="{ 'languages-container--active' : isOpen }"
     >
-      <a href="/fr/">
+      <router-link to="/fr/">
         <img 
-          :src="$withBase('images/flags/us.png')"
+          :src="$withBase('/images/flags/us.png')"
         >
       </a>
     </div>

@@ -12,7 +12,9 @@
       data-scroll-container
     >
       <main class="main-content">
-        <component :is="layout"/>
+          <transition appear>
+            <component :is="layout"/>
+          </transition>
       </main>
       <Footer/>
     </div>

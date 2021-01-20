@@ -5,26 +5,26 @@
   >
     <ul class="offcanvas__links">
       <li>
-        <a href="/">
+        <router-link href="/">
           Home
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="/contact/">
+        <router-link href="/contact/">
           Request a demo
-        </a>
+        </router-link>
       </li>
     </ul>
     <ul class="offcanvas__languages">
       <li>
-        <a href="/">
+        <router-link href="/">
           English
-        </a>
+        </router-link>
       </li>
       <li>
-        <a href="/fr/">
+        <router-link href="/fr/">
           French
-        </a>
+        </router-link>
       </li>
     </ul>
   </nav>
