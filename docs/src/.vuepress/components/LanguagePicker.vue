@@ -1,7 +1,7 @@
 <template>
   <div class="language-picker">
     <img 
-      :src="$withBase('/images/flags/us.png')"
+      :src="$withBase('/images/flags/en.png')"
       class="language-picker__image"
     >
     <button
@@ -19,9 +19,9 @@
     >
       <router-link to="/fr/">
         <img 
-          :src="$withBase('/images/flags/us.png')"
+          :src="$withBase('/images/flags/fr.png')"
         >
-      </a>
+      </router-link>
     </div>
   </div>
 </template>

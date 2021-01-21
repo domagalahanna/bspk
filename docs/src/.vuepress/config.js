@@ -17,7 +17,7 @@ module.exports = {
   head: [
     ['meta', { name: 'theme-color', content: '#DB420F' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com"'}],
     ['link', { href: 'https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@400;500;700&display=swap', rel: 'stylesheet'}]
   ],
@@ -44,6 +44,9 @@ module.exports = {
     'robots': {
       host: "https://domagalahanna.github.io/bspk/",
       disallowAll: true
+    },
+    'img-lazy': {
+      useNative: true
     }
   }
 }

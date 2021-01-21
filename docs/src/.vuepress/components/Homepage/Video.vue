@@ -6,7 +6,7 @@
   >
       <video 
         id="videoElement"
-        :src="$withBase($frontmatter.hero.video)"
+        :src="$withBase($frontmatter.video)"
         width="100%"
         loop
         muted

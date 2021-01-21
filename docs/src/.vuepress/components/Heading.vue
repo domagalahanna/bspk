@@ -2,7 +2,7 @@
   <component
     :is="tag" 
     class="heading"
-    :class="[ `heading--${tag}`, { 'heading--break' :  breakLine}]"
+    :class="[ `heading--${tagStyle ? tagStyle : tag}`, { 'heading--break' :  breakLine}]"
   >
     <span 
       v-for="headline in firstPartHeadlines"
@@ -40,7 +40,8 @@ export default {
     firstPartHeadlines: Array,
     secondPartHeadline: String,
     breakLine: Boolean,
-    tag: String
+    tag: String,
+    tagStyle: String
   }
 }
 </script>

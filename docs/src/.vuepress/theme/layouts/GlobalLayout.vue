@@ -40,7 +40,8 @@ export default {
   },
   updated() {
     if (this.scrollInstance) {
-      this.scrollInstance.update();
+      this.scrollInstance.destroy();
+      this.initLocoScroll();
     }
   },
   computed: {
@@ -63,10 +64,9 @@ export default {
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
         smoothMobile: true,
-        repeat: true,
         getDirection: true,
         reloadOnContextChange: true,
-        offset: [10,0]
+        offset: [0,0]
       });
 
       this.scrollInstance.on('scroll', scrollData => {
@@ -75,10 +75,12 @@ export default {
 
       this.scrollInstance.on('call', action => {
         let videoElement = null;
+        let currentTime = 0;
 
         switch(action) {
           case "playVideo" :
             videoElement = document.getElementById('videoElement');
+            currentTime = 3;
             break;
           case "playVisual0" :
             videoElement = document.querySelector("[data-visual-id='0']");
@@ -92,7 +94,7 @@ export default {
         }
 
         videoElement.pause();
-        videoElement.currentTime = 0;
+        videoElement.currentTime = currentTime;
         videoElement.play();
       })
     },

@@ -10,30 +10,30 @@
         data-scroll
         data-scroll-speed="1"
       >
-        <img 
+        <img-lazy 
           :src="$withBase(solution.image.mobile.src)"
           :alt="solution.image.mobile.alt"
           class="visuals__image visuals__image--mobile"
-        >
-        <img 
+        />
+        <img-lazy 
           :src="$withBase(solution.image.desktop.src)"
           :alt="solution.image.desktop.alt"
           class="visuals__image visuals__image--desktop"
-        >
+        />
         <div 
-          v-if="index !== 2"
+          v-if="solution.visuals.class !== 'tablet'"
           class="screen"
           data-scroll
           :data-scroll-call="`playVisual${index}`"
         >
-          <img 
-            :src="$withBase('images/iphonex2vs.png')"
+          <img-lazy 
+            :src="$withBase(solution.visuals.device)"
             alt=""
             class="screen__image"
-          >
+          />
           <div class="screen__video-wrapper">
             <video 
-              :src="$withBase('videos/BSPK_Mobile_Consultant.mp4')"
+              :src="$withBase(solution.visuals.video)"
               :data-visual-id="index"
               muted=""
               playsinline=""
@@ -41,6 +41,16 @@
               class="screen__video"
             ></video>
           </div>
+        </div>
+        <div
+          v-if="solution.visuals.class === 'tablet'"
+          class="screen screen--tablet"
+        >
+          <img-lazy 
+            :src="$withBase(solution.visuals.device)"
+            alt=""
+            class="screen__image"
+          />
         </div>
       </div>
       <div 
@@ -72,10 +82,10 @@
           to="contact/"
         >
           Learn More
-          <img 
+          <img-lazy 
             :src="$withBase('images/icons/arrow.svg')"
             alt=""
-          >
+          />
         </router-link>
       </div>
       </div>
@@ -133,12 +143,22 @@
 
   &__more
     color $accentColor
-    font-size 17px
     font-weight 500
     font-size 18px
+    display inline-flex
+    align-items center
 
     img 
       margin-left 15px
+
+  &--revert
+    .visuals
+      display flex
+      justify-content flex-end
+      
+    .screen
+      left 0
+      right auto
 
   @media (min-width $MQlg)
     padding 260px 0 0
@@ -166,6 +186,7 @@
       font-size 120px
       line-height 1
       margin-left -5px
+      margin-bottom 10px
 
     &__cta
       justify-content flex-start
@@ -225,6 +246,7 @@
           border-radius 50%
           top -90px
           left -156px
+
 .heading
  & > :first-child,
  & > :nth-child(2)
@@ -281,6 +303,12 @@
     height 100%
     transform translateX(-36%)
 
+  
+
+  &--tablet
+    width 200px
+    top 100px
+
   @media (min-width $MQlg)
     width 260px
     right -45px
@@ -288,4 +316,9 @@
 
     &__video
       transform translateX(-35%)
+
+    &--tablet
+      width 360px
+      top 105px
+      right -110px
 </style>

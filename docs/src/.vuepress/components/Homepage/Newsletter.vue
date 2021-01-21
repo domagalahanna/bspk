@@ -19,19 +19,8 @@
         Request a demo
       </Button>
     </div>
-    <div 
-      class="newsletter__section"
-      data-scroll
-    >
-      <Heading
-        :firstPartHeadlines="['Subscribe to', 'our newsletter']"
-        :breakLine="true"
-        tag="h2"
-      >
-      </Heading>
-      <ClientOnly>
-        <Homepage-NewsletterForm/>
-      </ClientOnly>
+    <div class="newsletter__section">
+        <NewsletterForm/>
     </div>
   </section>
 </template>
@@ -55,7 +44,6 @@ export default {
   text-align center
  
   &__section
-    width 100%
     padding 0 30px 85px
 
     .heading

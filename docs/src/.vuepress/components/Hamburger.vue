@@ -31,8 +31,7 @@ export default {
   width 29px
   height 17px
   display flex
-  flex-direction column
-  justify-content center
+  align-items center
   position relative
 
   & > *

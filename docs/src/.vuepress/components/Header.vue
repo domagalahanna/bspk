@@ -11,7 +11,7 @@
       >
     </router-link>
     <div class="header__buttons">
-      <LanguagePicker ref="picker"/>
+      <!-- <LanguagePicker ref="picker"/> -->
       <Button link="/contact/">
         Request a demo
       </Button>

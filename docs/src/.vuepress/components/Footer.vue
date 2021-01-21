@@ -5,7 +5,7 @@
     <footer class="footer" data-scroll>
       <div class="footer__content">
         <div class="footer__logo">
-          <img :src="$withBase('/images/logo.svg')" alt="BSPK">
+          <img :data-src="$withBase('/images/logo.svg')" loading="lazy" class="lazy" alt="BSPK"/>
         </div>
         <nav class="footer__nav">
           <div class="footer__contact">
@@ -14,8 +14,8 @@
             </h2>
             <address>
               Menlo Park, California, USA<br>
-              +1 415-915-2775<br>
-              contact@bspk.com<br>
+              <a href="tel:+14159152775">+1 415-915-2775</a><br>
+              <a href="mailto:contact@bspk.com">contact@bspk.com</a><br>
             </address>
           </div>
           <div class="footer__socials">

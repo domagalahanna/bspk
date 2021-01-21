@@ -87,7 +87,7 @@
         height 511px
         overflow hidden
         position absolute
-        right 20px
+        right 0
         border-top-left-radius 200px
 
         video

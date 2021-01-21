@@ -20,6 +20,7 @@ testimonials:
     alt: "Silicon Valley Business Journal"
     text: "The brand that is all about helping others making the sale"
 intro: "Our technology fosters invaluable human exchanges paving the way to the future of modern commerce."
+video: "videos/BSPK_Main_Video.mp4"
 solutions:
   - headlineFirstPart:
       - "Data-informed"
@@ -36,6 +37,10 @@ solutions:
       desktop:
         src: "images/homepage/WorkingManDesktop.jpg"
         alt: "Man working on a laptop"
+    visuals:
+      device: "images/iphonex2.png"
+      video: "videos/BSPK_Mobile_Consultant.mp4"
+      class: "messages"
   - headlineFirstPart:
       - "Emotion-based"
       - "conversions"
@@ -51,6 +56,10 @@ solutions:
       desktop:
         src: "images/homepage/ManWithCoffeeDesktop.jpg"
         alt: "Woman on the phone"
+    visuals:
+      device: "images/iphonex2vs.png"
+      video: "videos/BSPK_Mobile_Consultant.mp4"
+      class: "consultant"
   - headlineFirstPart:
       - "Loyalty-building"
       - "curations"
@@ -66,6 +75,10 @@ solutions:
       desktop:
         src: "images/homepage/ShoesAccessoriesDesktop.jpg"
         alt: "Shoes and belt"
+    visuals:
+        device: "images/iPad.png"
+        video: ""
+        class: "tablet"
 ---
 
 <Homepage-Hero/>
