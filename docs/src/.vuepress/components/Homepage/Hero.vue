@@ -20,6 +20,9 @@
           :breakLine="true"
           tag="h1"
         />
+        <p class="hero__content">
+          {{ $frontmatter.hero.content }}
+        </p>
         <Button 
           :link="$frontmatter.hero.ctaLink"
           size="large"
@@ -36,6 +39,12 @@
   &__copy
     padding 35px 41px 55px 
     text-align center
+    width 100%
+
+  &__content
+    width 100%
+    padding 20px 0
+    line-height 22px
 
   &__video
     width 100%
@@ -67,8 +76,14 @@
       display flex
       padding 100px 15px 120px
 
+    &__content
+      font-size 20px
+      line-height 32px
+      color $darkGrey
+      padding 10px 0
+
     &__copy
-      max-width 490px
+      max-width 540px
       text-align left
       padding 0
       order 1
@@ -140,7 +155,4 @@
 
     &::after
       right 650px
-
-.heading
-  margin-bottom 37px
 </style>

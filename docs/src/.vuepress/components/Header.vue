@@ -57,12 +57,13 @@ export default {
   methods: {
     hidePicker() {
       if(this.$refs.picker) {
-        this.$refs.picker.hideContainer()
+        this.$refs.picker.hideContainer();
       }
     },
     hideTicker() {
       localStorage.setItem('ticker-hide', true);
       this.getTickerHidden();
+      this.$emit('hide-ticker');
     },
     getTickerHidden() {
       this.isTickerHidden = localStorage.getItem('ticker-hide');
@@ -71,7 +72,7 @@ export default {
       if (this.isOffcanvasOpen && window.innerWidth < 992) {
         return;
       }
-      const { direction, scroll } = scrollData
+      const { direction, scroll } = scrollData;
 
       const scrollTop = scroll.y;
       const wasScrolledDown = direction === "down";
@@ -80,11 +81,11 @@ export default {
       this.isHidden = this.isScrolled && wasScrolledDown;
 
       if(this.isHidden) {
-        this.hidePicker()
+        this.hidePicker();
       }
     },
     toggleOffcanvas() {
-      this.$emit('toggle-offcanvas')
+      this.$emit('toggle-offcanvas');
     }
   }
 }

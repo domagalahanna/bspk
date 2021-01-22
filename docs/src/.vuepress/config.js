@@ -7,7 +7,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: 'BSPK page',
+  description: 'We help brands and retailers map tailored user journeys capturing rich data to drive sustainable growth and loyalty.',
 
   /**
    * Extra tags to be injected to the page HTML `<head>`

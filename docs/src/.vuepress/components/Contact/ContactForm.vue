@@ -97,6 +97,7 @@ export default {
     width 100%
     border-radius none
     -webkit-border-radius 0
+    -webkit-appearance none
     font-size 16px
     padding 0 10px
     line-height 36px

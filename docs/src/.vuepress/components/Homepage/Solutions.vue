@@ -156,6 +156,7 @@
     .visuals
       display flex
       justify-content flex-end
+      align-items center
       
     .screen
       left 0
@@ -266,6 +267,7 @@
       margin-bottom 75px
 
   @media (min-width $MQlg)
+    max-width 45%
     position absolute
     left 0
 
@@ -306,13 +308,18 @@
 
   &--tablet
     width 200px
-    top 100px
+    top auto
+    bottom 10px
 
   &--messages
     .screen__video
       height 98%
       transform translate(3px, 5px)
 
+  @media (min-width $MQmd)
+    &--tablet
+      width 360px
+      
   @media (min-width $MQlg)
     width 260px
     right -45px
@@ -322,7 +329,7 @@
       transform translateX(-35%)
 
     &--tablet
-      width 360px
       top 105px
+      bottom auto
       right -110px
 </style>

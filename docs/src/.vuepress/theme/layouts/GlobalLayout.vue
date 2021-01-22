@@ -1,20 +1,22 @@
 <template>
   <div 
     id="global-layout"
-    @scroll="this.$root.emit('openPopup')"
   >
     <Header 
       :isOffcanvasOpen="isOffcanvasOpen"
       @toggle-offcanvas="toggleOffcanvas"
+      @hide-ticker="hideTicker"
     />
-    <Offcanvas :isOpen="isOffcanvasOpen"/>
+    <Offcanvas 
+      :isOpen="isOffcanvasOpen"
+      :isTickerVisible="isTickerVisible"
+      @hide-offcanvas="hideOffcanvas"
+    />
     <div
       data-scroll-container
     >
       <main class="main-content">
-          <transition appear>
-            <component :is="layout"/>
-          </transition>
+          <component :is="layout"/>
       </main>
       <Footer/>
     </div>
@@ -29,7 +31,7 @@
         :showPostponeButton="true"
     >
       <div slot="postponeContent">
-          <img :src="$withBase('images/icons/close.svg')" alt="Close popup">
+          <img :src="$withBase('/images/icons/close.svg')" alt="Close popup">
       </div>
 
       <div slot="message">
@@ -54,22 +56,18 @@ import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css';
 export default {
   data: () => ({
     isOffcanvasOpen: false,
+    isTickerVisible: true,
     locomotiveScroll: null,
     scrollInstance: null
   }),
   mounted() {
     this.$root.$on('update-locoscroll', this.updateLocoScroll);
+    this.isTickerVisible = !localStorage.getItem('ticker-hide');
 
     import('locomotive-scroll').then(module => {
       this.locomotiveScroll = module.default;
       this.initLocoScroll();
     });
-  },
-  updated() {
-    if (this.scrollInstance) {
-      this.scrollInstance.destroy();
-      this.initLocoScroll();
-    }
   },
   computed: {
     layout () {
@@ -84,7 +82,14 @@ export default {
   },
   methods: {
     toggleOffcanvas() {
-      this.isOffcanvasOpen = !this.isOffcanvasOpen
+      this.isOffcanvasOpen = !this.isOffcanvasOpen;
+    },
+    hideOffcanvas() {
+      this.isOffcanvasOpen = false;
+    },
+    hideTicker() {
+      this.isTickerVisible = false;
+      this.updateLocoScroll();
     },
     initLocoScroll() {
       this.scrollInstance = new this.locomotiveScroll({
@@ -127,7 +132,14 @@ export default {
     },
     updateLocoScroll() {
       if(this.scrollInstance) {
-        this.scrollInstance.update();
+        this.scrollInstance.destroy();
+        this.initLocoScroll();
+        this.$root.$emit('body-scroll', {
+          direction: "up",
+          scroll: {
+            y: 0
+          }
+        });
       }
     }
   }

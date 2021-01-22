@@ -19,7 +19,7 @@ export default {
     isOpen: Boolean
   },
   methods: {
-    toggleOffcanvas: function() {
+    toggleOffcanvas() {
       this.$emit('toggle-offcanvas')
     }
   }

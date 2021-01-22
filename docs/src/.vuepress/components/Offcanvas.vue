@@ -1,9 +1,12 @@
 <template>
   <nav
     class="offcanvas"
-    :class="{ 'offcanvas--open' : isOpen }"
+    :class="{ 'offcanvas--open' : isOpen , 'offcanvas--pushed' : isTickerVisible }"
   >
-    <ul class="offcanvas__links">
+    <ul 
+      class="offcanvas__links"
+      @click="hideOffcanvas"
+    >
       <li>
         <router-link to="/">
           Home
@@ -15,7 +18,7 @@
         </router-link>
       </li>
     </ul>
-    <ul class="offcanvas__languages">
+    <!-- <ul class="offcanvas__languages">
       <li>
         <router-link to="/">
           English
@@ -26,14 +29,20 @@
           French
         </router-link>
       </li>
-    </ul>
+    </ul> -->
   </nav>
 </template>
 
 <script>
 export default {
   props: {
-    isOpen: Boolean
+    isOpen: Boolean,
+    isTickerVisible: Boolean
+  },
+  methods: {
+    hideOffcanvas() {
+      this.$emit('hide-offcanvas');
+    }
   }
 }
 </script>
@@ -70,6 +79,9 @@ export default {
     visibility visible 
     transform translateX(0)
     transition all 0.3s ease
+
+  &--pushed
+    top 130px
 
   @media (min-width $MQlg)
     display none

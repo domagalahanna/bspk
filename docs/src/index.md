@@ -1,5 +1,5 @@
 ---
-title: Homepage
+title: Human connections elevating customer experiences for all
 hero:
   headlines:
     - "Human connections"
@@ -8,6 +8,7 @@ hero:
   highlighted: "for all"
   ctaCopy: "Request a Demo"
   ctaLink: "contact/"
+  content: "We help brands and retailers map tailored user journeys capturing rich data to drive sustainable growth and loyalty."
   video: "videos/HeroVideo.mp4"
 testimonials:
   - logo: "images/Forbes.png"
@@ -51,11 +52,11 @@ solutions:
     description: "uplift in sales conversions"
     image:
       mobile:
-        src: "images/homepage/WomanOnThePhone.jpg"
-        alt: "Woman on the phone"
+        src: "images/homepage/ManWithCoffee.png"
+        alt: "Man with coffee"
       desktop:
         src: "images/homepage/ManWithCoffeeDesktop.jpg"
-        alt: "Woman on the phone"
+        alt: "Man with coffee"
     visuals:
       device: "images/iphonex2vs.png"
       video: "videos/BSPK_Mobile_Consultant.mp4"
