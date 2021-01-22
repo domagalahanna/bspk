@@ -21,8 +21,9 @@
           class="visuals__image visuals__image--desktop"
         />
         <div 
-          v-if="solution.visuals.class !== 'tablet'"
+          v-if="solution.visuals.name !== 'tablet'"
           class="screen"
+          :class="`screen--${solution.visuals.name}`"
           data-scroll
           :data-scroll-call="`playVisual${index}`"
         >
@@ -43,7 +44,7 @@
           </div>
         </div>
         <div
-          v-if="solution.visuals.class === 'tablet'"
+          v-if="solution.visuals.name === 'tablet'"
           class="screen screen--tablet"
         >
           <img-lazy 
@@ -303,11 +304,14 @@
     height 100%
     transform translateX(-36%)
 
-  
-
   &--tablet
     width 200px
     top 100px
+
+  &--messages
+    .screen__video
+      height 98%
+      transform translate(3px, 5px)
 
   @media (min-width $MQlg)
     width 260px

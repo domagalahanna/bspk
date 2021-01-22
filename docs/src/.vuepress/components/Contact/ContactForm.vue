@@ -123,7 +123,8 @@ export default {
     position relative
     margin 0
     cursor pointer
-
+    flex-shrink 0
+    
     &:focus
       outline none 
 

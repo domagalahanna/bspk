@@ -39,8 +39,8 @@ solutions:
         alt: "Man working on a laptop"
     visuals:
       device: "images/iphonex2.png"
-      video: "videos/BSPK_Mobile_Consultant.mp4"
-      class: "messages"
+      video: "videos/BSPK_Messages.mp4"
+      name: "messages"
   - headlineFirstPart:
       - "Emotion-based"
       - "conversions"
@@ -59,7 +59,7 @@ solutions:
     visuals:
       device: "images/iphonex2vs.png"
       video: "videos/BSPK_Mobile_Consultant.mp4"
-      class: "consultant"
+      name: "consultant"
   - headlineFirstPart:
       - "Loyalty-building"
       - "curations"
@@ -78,7 +78,7 @@ solutions:
     visuals:
         device: "images/iPad.png"
         video: ""
-        class: "tablet"
+        name: "tablet"
 ---
 
 <Homepage-Hero/>

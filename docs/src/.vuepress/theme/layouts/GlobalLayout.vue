@@ -18,11 +18,38 @@
       </main>
       <Footer/>
     </div>
+    <vue-cookie-accept-decline
+        :ref="'cookie-notice'"
+        :elementId="'cookie-notice'"
+        :debug="false"
+        :position="'bottom-right'"
+        :type="'floating'"
+        :disableDecline="false"
+        :transitionName="'fade'"
+        :showPostponeButton="true"
+    >
+      <div slot="postponeContent">
+          <img :src="$withBase('images/icons/close.svg')" alt="Close popup">
+      </div>
+
+      <div slot="message">
+        This website uses cookies to improve your experience. By clicking on the "Accept" button, you give us your consent to save cookies.
+      </div>
+
+      <div slot="declineContent">
+        Decline
+      </div>
+ 
+      <div slot="acceptContent">
+          Accept
+      </div>
+    </vue-cookie-accept-decline>
   </div>
 </template>
 
 <script>
 import 'locomotive-scroll/dist/locomotive-scroll.css';
+import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css';
 
 export default {
   data: () => ({

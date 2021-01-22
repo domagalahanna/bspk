@@ -101,3 +101,55 @@ img
 .slide-fade-enter, .slide-fade-leave-to
   transform translateX(10px)
   opacity 0
+
+.cookie__floating
+  background $black
+  padding 30px
+  color $white
+  font-size 15px
+  line-height 20px
+  font-weight 500
+  border none
+  border-radius 0
+  box-shadow none
+  max-width 370px
+
+  &__buttons
+    background $black
+
+  &__content
+    max-height none
+    padding 0 50px 20px 0
+
+  &__postpone-button
+    padding 0
+    margin 0
+    position absolute
+    right 30px
+    top 30px
+
+  &__buttons__button--decline
+    color $white
+    border 1px solid alpha($white, 0.8)
+    background $black
+    border-radius 6px
+    padding 15px
+    max-width 100px
+    margin-right 15px
+
+    &:hover
+      background none
+      color inherit 
+    
+  &__buttons__button--accept
+    color $black
+    border 1px solid $white
+    background $white
+    border-radius 6px
+    padding 15px
+    max-width 100px
+    margin-right 15px
+
+    &:hover
+      background $white
+      color $black

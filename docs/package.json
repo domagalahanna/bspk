@@ -22,6 +22,7 @@
   "dependencies": {
     "locomotive-scroll": "^4.0.6",
     "vue-carousel": "^0.18.0",
+    "vue-cookie-accept-decline": "^5.4.0",
     "vuepress-plugin-img-lazy": "^1.0.4",
     "vuepress-plugin-robots": "^1.0.1"
   }
