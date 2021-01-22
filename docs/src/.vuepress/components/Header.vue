@@ -1,26 +1,43 @@
 <template>
-  <header
-    class="header"
-    :class="{ 'header--hidden' : isHidden }"
-  >
-    <router-link to="/">
-      <img 
-        :src="$withBase('/images/logo.svg')"
-        class="header__logo"
-        alt="BSPK"
+  <div 
+    class="wrapper"
+    :class="{ 'wrapper--ticker-show' : !isTickerHidden }"
+   >
+    <div class="ticker">
+      More content is in the works and will be live soon!
+      <button 
+        class="ticker__close"
+        @click="hideTicker"
       >
-    </router-link>
-    <div class="header__buttons">
-      <!-- <LanguagePicker ref="picker"/> -->
-      <Button link="/contact/">
-        Request a demo
-      </Button>
+        <img 
+          :src="$withBase('/images/icons/close-black.svg')"
+          alt="Close ticker"
+        >
+      </button>
     </div>
-    <Hamburger 
-      :isOpen="isOffcanvasOpen"
-      @toggle-offcanvas="toggleOffcanvas"
-    />
-  </header>
+    <header
+      class="header"
+      :class="{ 'header--hidden' : isHidden }"
+    >
+      <router-link to="/">
+        <img 
+          :src="$withBase('/images/logo.svg')"
+          class="header__logo"
+          alt="BSPK"
+        >
+      </router-link>
+      <div class="header__buttons">
+        <!-- <LanguagePicker ref="picker"/> -->
+        <Button link="/contact/">
+          Request a demo
+        </Button>
+      </div>
+      <Hamburger 
+        :isOpen="isOffcanvasOpen"
+        @toggle-offcanvas="toggleOffcanvas"
+      />
+    </header>
+  </div>
 </template>
 
 <script>
@@ -31,15 +48,24 @@ export default {
   data: () => ({
     isScrolled: false,
     isHidden: false,
+    isTickerHidden: false
   }),
   mounted() {
     this.$root.$on('body-scroll', this.toggleVisibility);
+    this.getTickerHidden();
   },
   methods: {
     hidePicker() {
       if(this.$refs.picker) {
         this.$refs.picker.hideContainer()
       }
+    },
+    hideTicker() {
+      localStorage.setItem('ticker-hide', true);
+      this.getTickerHidden();
+    },
+    getTickerHidden() {
+      this.isTickerHidden = localStorage.getItem('ticker-hide');
     },
     toggleVisibility(scrollData) {
       if (this.isOffcanvasOpen && window.innerWidth < 992) {
@@ -65,6 +91,46 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.wrapper--ticker-show
+  height 70px
+
+  .ticker
+    display flex
+    transition all .3s
+
+  .header
+    transition all .3s
+    top 70px
+
+.ticker
+  transition all .3s
+  padding 0 30px 0 40px
+  height 70px
+  width 100%
+  background $darkBeige
+  position fixed
+  top 0
+  text-align center
+  display flex
+  align-items center
+  justify-content center
+  z-index 300
+  font-size 14px
+  color $darkGrey
+  font-weight 500
+  display none
+
+  &__close
+    position absolute
+    right 15px
+    cursor pointer
+
+  @media (min-width $MQlg)
+    font-size 17px
+    
+      &__close
+        right 30px
+
 .header
   background white
   position fixed
