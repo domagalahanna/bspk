@@ -132,6 +132,9 @@ export default {
       &__close
         right 30px
 
+  @media (max-width 400px)
+    font-size 12px
+
 .header
   background white
   position fixed
