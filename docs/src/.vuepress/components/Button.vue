@@ -30,8 +30,15 @@ export default {
   border none
   padding 20px 40px
   background $black
-  transition background-color .4s ease-in-out
+  transition background-color .4s ease-in-out, opacity .2s
   display inline-block
+
+  &:disabled
+    opacity 0.5
+    transition opacity .2s
+    
+    &:hover
+      cursor not-allowed 
 
   &:hover
     cursor pointer

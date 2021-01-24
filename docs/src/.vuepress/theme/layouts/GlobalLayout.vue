@@ -62,6 +62,7 @@ export default {
   }),
   mounted() {
     this.$root.$on('update-locoscroll', this.updateLocoScroll);
+    this.$root.$on('locoscroll-scroll-to-errors', this.scrollToLocoScroll);
     this.isTickerVisible = !localStorage.getItem('ticker-hide');
 
     import('locomotive-scroll').then(module => {
@@ -139,6 +140,14 @@ export default {
           scroll: {
             y: 0
           }
+        });
+      }
+    },
+    scrollToLocoScroll() {
+      if(this.scrollInstance) {
+        const errors = document.getElementById('errors');
+        if (errors) this.scrollInstance.scrollTo(errors, {
+          offset: -700
         });
       }
     }

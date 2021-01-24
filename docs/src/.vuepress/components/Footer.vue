@@ -24,10 +24,10 @@
             </h2>
             <ul>
               <li>
-                <a href="#" target="_blank">Twitter</a>
+                <a href="https://twitter.com/bspkluxury" target="_blank">Twitter</a>
               </li>
               <li>
-                <a href="#" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/company/bspkluxury" target="_blank">LinkedIn</a>
               </li>
               <li>
                 <a href="#" target="_blank">Facebook</a>
