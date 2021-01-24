@@ -301,6 +301,7 @@
     height 100%
     padding 5% 0
     -webkit-mask-image -webkit-radial-gradient(white, black)
+    background $white
 
   &__video
     height 100%
@@ -313,7 +314,7 @@
 
   &--messages
     .screen__video
-      height 98%
+      height 90%
       transform translate(3px, 5px)
 
   @media (min-width $MQmd)
@@ -329,6 +330,7 @@
       transform translateX(-35%)
 
     &--tablet
+      width 360px
       top 105px
       bottom auto
       right -110px

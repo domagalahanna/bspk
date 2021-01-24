@@ -40,7 +40,7 @@ solutions:
         alt: "Man working on a laptop"
     visuals:
       device: "images/iphonex2.png"
-      video: "videos/BSPK_Messages.mp4"
+      video: "videos/BSPK_Messages_Video.mp4"
       name: "messages"
   - headlineFirstPart:
       - "Emotion-based"
