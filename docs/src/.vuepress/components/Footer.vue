@@ -29,9 +29,6 @@
               <li>
                 <a href="https://www.linkedin.com/company/bspkluxury" target="_blank">LinkedIn</a>
               </li>
-              <li>
-                <a href="#" target="_blank">Facebook</a>
-              </li>
             </ul>
           </div>
         </nav>
@@ -40,7 +37,9 @@
         <nav>
           <a href="#">Privacy</a>
           <span class="divider">—</span>
-          <a href="#">Terms of use</a>
+          <router-link to="/terms-of-use/">
+            Terms of use
+          </router-link>
         </nav>
         <div class="copyrights__copy">
           ©2021 BSPK Inc. All rights reserved.

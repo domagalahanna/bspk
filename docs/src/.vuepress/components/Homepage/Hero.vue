@@ -78,7 +78,7 @@
 
     &__content
       font-size 20px
-      line-height 32px
+      line-height 26px
       color $darkGrey
       padding 10px 0
 

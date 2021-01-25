@@ -51,51 +51,56 @@
           >
         </div>
         <div class="input-wrapper">
-          <label for="company-name">Company name</label>
+          <label for="company-name">Company name *</label>
           <input
             name="Company-name"
             id="company-name"
             type="text"
             maxlength="100"
+            v-model="company"
           >
         </div>
         <div class="input-wrapper">
-          <label for="job-title">Job title</label>
+          <label for="job-title">Job title *</label>
           <input
             name="Job-title"
             id="job-title"
             type="text"
             maxlength="100"
+            v-model="job"
           >
         </div>
         <div class="input-wrapper">
-          <label for="country">Country</label>
+          <label for="country">Country *</label>
           <input
             name="Country"
             id="country"
             type="text"
             maxlength="100"
+            v-model="country"
           >
         </div>
         <div class="input-wrapper">
-          <label for="sales-advisor">NUMBER OF SALES ADVISOR</label>
+          <label for="sales-advisor">Number of sales advisor *</label>
           <input
             name="Sales-advisor"
             id="sales-advisor"
             type="number"
             maxlength="6"
+            v-model="numberSales"
           >
         </div>
         <div class="input-wrapper">
-          <label for="stores">NUMBER OF STORES</label>
+          <label for="stores">Number of stores *</label>
           <input
             name="Stores"
             id="stores"
             type="number"
+            v-model="numberStores"
           >
         </div>
         <div class="input-wrapper input-wrapper--full">
-          <label for="comments">COMMENTS</label>
+          <label for="comments">Comments</label>
           <textarea 
             placeholder="Add your message..."
             name="Comments"
@@ -110,7 +115,7 @@
         <div class="input-wrapper input-wrapper--full input-wrapper--checkbox">
           <input type="checkbox" id="consent" name="consent" checked @change="toggleButton">
           <label for="consent">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem <router-link to="/">accusantium</router-link>
+            I accept the <router-link to="/">Privacy & Cookies Policy</router-link>
           </label>
         </div>
         <div class="input-wrapper input-wrapper--full">
@@ -132,7 +137,12 @@ export default {
     isFormDisabled: false,
     firstName: null,
     lastName: null,
-    email: null
+    email: null,
+    company: null,
+    job: null,
+    country: null,
+    numberSales: null,
+    numberStores: null
   }),
   mounted() {
     this.$root.$emit('update-locoscroll');
@@ -142,8 +152,11 @@ export default {
     }, 500)
   },
   methods: {
+    getRequiredFilled() {
+      return this.firstName && this.lastName && this.email && this.company && this.job && this.country && this.numberSales && this.numberStores
+    },
     checkForm(e) {
-      if (this.firstName && this.lastName && this.email) {
+      if (this.getRequiredFilled()) {
         return true
       } else {
         this.errors = [];
@@ -158,6 +171,26 @@ export default {
 
         if (!this.email) {
           this.errors.push('Email')
+        }
+
+        if (!this.company) {
+          this.errors.push('Company')
+        }
+
+        if (!this.job) {
+          this.errors.push('Job')
+        }
+
+        if (!this.country) {
+          this.errors.push('Country')
+        }
+
+        if (!this.numberSales) {
+          this.errors.push('Number of sales advisors')
+        }
+
+        if (!this.numberStores) {
+          this.errors.push('Number of stores')
         }
         
         this.$root.$emit('locoscroll-scroll-to-errors');

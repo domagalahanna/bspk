@@ -13,7 +13,7 @@
       >
       </Heading>
       <Button 
-        link="contact/"
+        link="/contact/"
         size="large"
       >
         Request a demo
