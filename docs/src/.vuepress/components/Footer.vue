@@ -35,7 +35,9 @@
       </div>
       <div class="copyrights">
         <nav>
-          <a href="#">Privacy</a>
+          <router-link to="/privacy/">
+            Privacy
+          </router-link>
           <span class="divider">—</span>
           <router-link to="/terms-of-use/">
             Terms of use

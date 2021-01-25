@@ -115,7 +115,7 @@
         <div class="input-wrapper input-wrapper--full input-wrapper--checkbox">
           <input type="checkbox" id="consent" name="consent" checked @change="toggleButton">
           <label for="consent">
-            I accept the <router-link to="/">Privacy & Cookies Policy</router-link>
+            I accept the <router-link to="/privacy-policy/">Privacy & Cookies Policy</router-link>
           </label>
         </div>
         <div class="input-wrapper input-wrapper--full">
