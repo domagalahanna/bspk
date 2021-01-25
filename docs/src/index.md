@@ -39,7 +39,7 @@ solutions:
         src: "images/homepage/WorkingManDesktop.jpg"
         alt: "Man working on a laptop"
     visuals:
-      device: "images/iphonex2.png"
+      device: "images/iphone.png"
       video: "videos/BSPK_Messages_Video.mp4"
       name: "messages"
   - headlineFirstPart:
