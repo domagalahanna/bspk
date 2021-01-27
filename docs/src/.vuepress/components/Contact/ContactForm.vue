@@ -100,11 +100,11 @@
           >
         </div>
         <div class="input-wrapper input-wrapper--full">
-          <label for="comments">Comments</label>
+          <label for="user-comments">Comments</label>
           <textarea 
             placeholder="Add your message..."
             name="Comments"
-            id="comments"
+            id="user-comments"
             maxlength="1000"
           >
           </textarea>

@@ -15,7 +15,10 @@
     <div
       data-scroll-container
     >
-      <main class="main-content">
+      <main 
+        class="main-content"
+        :class="{'main-content--pushed' : isTickerVisible}"
+      >
           <component :is="layout"/>
       </main>
       <Footer/>
@@ -26,7 +29,7 @@
         :debug="false"
         :position="'bottom-right'"
         :type="'floating'"
-        :disableDecline="false"
+        :disableDecline="true"
         :transitionName="'fade'"
         :showPostponeButton="true"
     >
@@ -35,13 +38,8 @@
       </div>
 
       <div slot="message">
-        This website uses cookies to improve your experience. By clicking on the "Accept" button, you give us your consent to save cookies.
+        This website uses cookies to improve your experience. <router-link to="/cookie-policy">See Cookie Policy</router-link>
       </div>
-
-      <div slot="declineContent">
-        Decline
-      </div>
- 
       <div slot="acceptContent">
           Accept
       </div>
@@ -167,6 +165,9 @@ export default {
 <style lang="stylus">
 .main-content
   padding-top 60px
+
+  &--pushed
+    padding-top 130px
 
   @media (min-width $MQlg)
     padding-top 100px

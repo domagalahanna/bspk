@@ -8,6 +8,7 @@
   box-sizing border-box
 
 body
+  -webkit-font-smoothing subpixel-antialiased
   overflow-x hidden
   margin 0
   default-font-family()
@@ -53,13 +54,20 @@ button
   &:hover, &:active
     outline none
 
-ul
+ul:not(.styled-list)
   list-style none 
   margin 0
   padding 0
 
   li
     padding 0
+
+.styled-list
+  li
+    margin-bottom 20px
+    
+    & > ul
+      margin-top 20px
 
 img
   max-width 100% 
@@ -122,6 +130,9 @@ img
   border-radius 0
   box-shadow none
   max-width 370px
+
+  a
+    text-decoration underline
 
   &__buttons
     background $black

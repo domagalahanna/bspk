@@ -42,6 +42,10 @@
           <router-link to="/terms-of-use/">
             Terms of use
           </router-link>
+          <span class="mobile-break"></span>
+          <router-link to="/cookie-policy/">
+            Cookie Policy
+          </router-link>
         </nav>
         <div class="copyrights__copy">
           ©2021 BSPK Inc. All rights reserved.
@@ -152,6 +156,12 @@ export default {
   @media (min-width $MQlg)
     display none
 
+.mobile-break
+  display block
+
+  @media (min-width $MQlg)
+    display none
+    
 .footer-circle
   @media (min-width $MQlg)
     height 130px
