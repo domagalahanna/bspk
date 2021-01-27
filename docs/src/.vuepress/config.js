@@ -41,7 +41,6 @@ module.exports = {
       }
     ]
   },
-
   plugins: {
     'robots': {
       host: "https://domagalahanna.github.io/bspk/",

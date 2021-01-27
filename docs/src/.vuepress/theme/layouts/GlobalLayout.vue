@@ -76,8 +76,9 @@ export default {
           return this.$frontmatter.layout
         }
         return 'Layout'
+      } else {
+        return 'NotFound'
       }
-      return '404'
     }
   },
   methods: {
