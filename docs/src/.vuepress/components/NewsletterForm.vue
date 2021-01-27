@@ -24,7 +24,7 @@
             type="email"
             class="input input--full"
             placeholder="Email address"
-            required
+            v-model="userEmail"
           >
           <input
             class="input input--submit"
@@ -34,6 +34,14 @@
           />
 
           <div id="newsletterrecaptcha" class="g-recaptcha"></div>
+          <transition name="fade">
+            <div 
+              class="validation-message"
+              v-show="validationError"
+            >
+              Please provide email address.
+            </div>
+          </transition>
           <div class="recaptcha-message">
             This site is protected by reCAPTCHA and the Google 
             <a target="_blank" href="https://policies.google.com/privacy">Privacy Policy</a>
@@ -47,13 +55,22 @@
 
 <script>
 export default {
+  data: () => ({
+    validationError: false,
+    userEmail: null
+  }),
   mounted() {
     this.initReCaptcha();
   },
   methods: {
     validate(e) {
       e.preventDefault();
-      grecaptcha.execute();
+      if(this.userEmail) {
+        this.validationError = false;
+        grecaptcha.execute()
+      } else {
+        this.validationError = true;
+      }
     },
     initReCaptcha() {
       var self = this;
@@ -80,6 +97,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.validation-message
+  text-align left
+  color $darkGrey
+  margin-top 10px
+  font-weight 500
+
 .newsletter-section
   height 100%
   display flex

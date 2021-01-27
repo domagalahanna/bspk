@@ -5,7 +5,9 @@
     <footer class="footer" data-scroll>
       <div class="footer__content">
         <div class="footer__logo">
-          <img :data-src="$withBase('/images/logo.svg')" loading="lazy" class="lazy" alt="BSPK"/>
+          <router-link to="/">
+            <img :data-src="$withBase('/images/logo.svg')" loading="lazy" class="lazy" alt="BSPK"/>
+          </router-link>
         </div>
         <nav class="footer__nav">
           <div class="footer__contact">
