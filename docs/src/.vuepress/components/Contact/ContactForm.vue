@@ -15,10 +15,10 @@
       </ul>
     </p>
     <form 
-        action="https://formspree.io/f/xbjpqgaj"
+        action="https://formspree.io/f/xwkwyalg"
         method="POST"
         class="form"
-        @submit="checkForm"
+        ref="contactForm"
       >
         <div class="input-wrapper input-wrapper--required">
           <label for="first-name">First name *</label>
@@ -118,14 +118,22 @@
             I accept the <router-link to="/privacy-policy/">Privacy & Cookies Policy</router-link>
           </label>
         </div>
+        <p class="recaptcha-message">
+          This site is protected by reCAPTCHA and the Google 
+          <a target="_blank" href="https://policies.google.com/privacy">Privacy Policy</a>
+            and 
+          <a target="_blank" href="https://policies.google.com/terms">Terms of Service</a> apply.
+        </p>
         <div class="input-wrapper input-wrapper--full">
-          <Button 
-            size="large"
+          <button 
+            class="button button--large"
            :disabled="isFormDisabled"
+           @click="validate"
           >
             Submit
-          </Button>
+          </button>
         </div>
+        <div id="contactformcaptcha" class="g-recaptcha"></div>
     </form>
   </div>
 </template>
@@ -145,6 +153,7 @@ export default {
     numberStores: null
   }),
   mounted() {
+    this.initReCaptcha();
     this.$root.$emit('update-locoscroll');
     
     setTimeout(() => {
@@ -152,10 +161,32 @@ export default {
     }, 500)
   },
   methods: {
+    validate(e) {
+      e.preventDefault();
+      const isValid = this.checkForm() && e.target.disabled === false;
+      if(isValid) grecaptcha.execute();
+    },
+    initReCaptcha() {
+        var self = this;
+        setTimeout(function() {
+            if(typeof grecaptcha === 'undefined') {
+                self.initReCaptcha();
+            }
+            else {
+                grecaptcha.ready(function () {
+                  grecaptcha.render('contactformcaptcha', {
+                    sitekey: '6LeTXT0aAAAAAK-QGc21nbrcIRo0v73TsF_CA55Y',
+                    size: 'invisible',
+                    callback: self.submit
+                  });
+                });
+            }
+        }, 100);
+    },
     getRequiredFilled() {
       return this.firstName && this.lastName && this.email && this.company && this.job && this.country && this.numberSales && this.numberStores
     },
-    checkForm(e) {
+    checkForm() {
       if (this.getRequiredFilled()) {
         return true
       } else {
@@ -194,8 +225,12 @@ export default {
         }
         
         this.$root.$emit('locoscroll-scroll-to-errors');
-        e.preventDefault();
+
+        return false
       }
+    },
+    submit: function(token) {
+      this.$refs['contactForm'].submit();
     },
     toggleButton(e) {
       this.isFormDisabled = !e.target.checked;
@@ -309,7 +344,7 @@ export default {
 
     &--checkbox
       display flex
-      margin 30px 0
+      margin 30px 0 0
       align-items center
       cursor pointer
 
@@ -342,7 +377,7 @@ export default {
         width 100%
         
       &--checkbox
-        margin 10px 0 30px
+        margin 10px 0 0
   
     label
       margin-bottom 8px
@@ -365,4 +400,11 @@ export default {
       min-width 220px
       margin 0 auto
       display block
+
+.recaptcha-message
+  opacity 0.3
+  font-size 12px
+  text-align left
+  width 100%
+  margin-bottom 30px
 </style>

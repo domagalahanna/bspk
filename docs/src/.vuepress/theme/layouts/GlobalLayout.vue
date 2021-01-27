@@ -91,7 +91,7 @@ export default {
     },
     hideTicker() {
       this.isTickerVisible = false;
-      this.updateLocoScroll();
+      this.scrollInstance.update();
     },
     initLocoScroll() {
       this.scrollInstance = new this.locomotiveScroll({

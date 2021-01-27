@@ -58,7 +58,7 @@ export default {
     
     setTimeout(() => {
       this.$root.$emit('update-locoscroll');
-    }, 500)
+    }, 1000)
   }
 }
 </script>

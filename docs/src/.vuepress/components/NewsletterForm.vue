@@ -8,8 +8,9 @@
     </Heading>
     <div class="form-wrapper">
       <form 
-          action="https://formspree.io/f/xbjpqgaj"
+          action="https://formspree.io/f/mpzobrpl"
           method="POST"
+          ref="newsletterForm"
         >
           <label 
             for="user-email"
@@ -29,11 +30,54 @@
             class="input input--submit"
             type="submit"
             value="OK"
+            @click="validate"
           />
+
+          <div id="newsletterrecaptcha" class="g-recaptcha"></div>
+          <div class="recaptcha-message">
+            This site is protected by reCAPTCHA and the Google 
+            <a target="_blank" href="https://policies.google.com/privacy">Privacy Policy</a>
+             and 
+            <a target="_blank" href="https://policies.google.com/terms">Terms of Service</a> apply.
+          </div>
       </form>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    this.initReCaptcha();
+  },
+  methods: {
+    validate(e) {
+      e.preventDefault();
+      grecaptcha.execute();
+    },
+    initReCaptcha() {
+      var self = this;
+      setTimeout(function() {
+          if(typeof grecaptcha === 'undefined') {
+              self.initReCaptcha();
+          }
+          else {
+            grecaptcha.ready(function () {
+              grecaptcha.render('newsletterrecaptcha', {
+                  sitekey: '6LeTXT0aAAAAAK-QGc21nbrcIRo0v73TsF_CA55Y',
+                  size: 'invisible',
+                  callback: self.submit
+              });
+            })
+          }
+      }, 100);
+    },
+    submit: function(token) {
+      this.$refs['newsletterForm'].submit();
+    }
+  }
+}
+</script>
 
 <style lang="stylus" scoped>
 .newsletter-section
@@ -90,6 +134,18 @@ form
     top 0
     right 0
     border-bottom 0
+
+.g-recaptcha
+  position fixed
+  z-index -1
+  opacity 0
+
+.recaptcha-message
+  opacity 0.3
+  font-size 12px
+  text-align left
+  position absolute
+  top 150%
 
 .heading
   margin-bottom 26px

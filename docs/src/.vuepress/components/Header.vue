@@ -94,6 +94,8 @@ export default {
 <style lang="stylus" scoped>
 .wrapper--ticker-show
   height 70px
+  position fixed
+  z-index 200
 
   .ticker
     display flex

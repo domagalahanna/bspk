@@ -39,7 +39,9 @@
       </address>
     </div>
     <div class="hide-desktop">
+      <ClientOnly>
         <NewsletterForm/>
+      </ClientOnly>
     </div>
   </div>
 </template>

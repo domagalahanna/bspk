@@ -20,7 +20,9 @@
       </Button>
     </div>
     <div class="newsletter__section">
+      <ClientOnly>
         <NewsletterForm/>
+      </ClientOnly>
     </div>
   </section>
 </template>
@@ -32,7 +34,7 @@ export default {
     
     setTimeout(() => {
       this.$root.$emit('update-locoscroll');
-    }, 500)
+    }, 1000)
   }
 }
 </script>

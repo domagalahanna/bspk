@@ -50,7 +50,9 @@
           Request a demo
         </Button>
       </div>
-      <NewsletterForm/>
+      <ClientOnly>
+        <NewsletterForm/>
+      </ClientOnly>
     </div>
   </div>
 </template>
@@ -62,7 +64,7 @@ export default {
     
     setTimeout(() => {
       this.$root.$emit('update-locoscroll');
-    }, 500)
+    }, 1000)
   }
 }
 </script>
