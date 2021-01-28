@@ -4,12 +4,13 @@
       <div class="hero__video">
         <div class="video-container" data-scroll data-scroll-speed="1">
           <video
-            :src="$withBase($frontmatter.hero.video)"
             autoplay=""
+            defaultMuted=""
             loop=""
             muted=""
             playsinline=""
           >
+            <source :src="isMobile ? $withBase($frontmatter.hero.videoMobile) : $withBase($frontmatter.hero.video)" type="video/mp4">
           </video>
         </div>
       </div>
@@ -33,6 +34,17 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    isMobile: false
+  }),
+  mounted() {
+    this.isMobile = window.innerWidth < 500
+  }
+}
+</script>
 
 <style lang="stylus" scoped>
 .hero
@@ -155,4 +167,10 @@
 
     &::after
       right 650px
+
+// video
+//   display none
+
+//   @media(min-width $MQlg)
+//     display block
 </style>

@@ -10,6 +10,7 @@ hero:
   ctaLink: "contact/"
   content: "We help brands and retailers map tailored user journeys capturing rich data to drive sustainable growth and loyalty."
   video: "videos/HeroVideo.mp4"
+  videoMobile: "videos/HeroVideoMobile.mp4"
 testimonials:
   - logo: "images/Forbes.png"
     alt: "Forbes"
@@ -22,6 +23,7 @@ testimonials:
     text: "The brand that is all about helping others making the sale"
 intro: "Our technology fosters invaluable human exchanges paving the way to the future of modern commerce."
 video: "videos/BSPK_Main_Video.mp4"
+videoMobile: "videos/BSPK_Main_Video_Mobile.mp4"
 solutions:
   - headlineFirstPart:
       - "Data-informed"
@@ -41,6 +43,7 @@ solutions:
     visuals:
       device: "images/iphone.png"
       video: "videos/BSPK_Messages_Video.mp4"
+      videoMobile: "videos/BSPK_Messages_Video.mp4"
       name: "messages"
   - headlineFirstPart:
       - "Emotion-based"
@@ -52,7 +55,7 @@ solutions:
     description: "uplift in sales conversions"
     image:
       mobile:
-        src: "images/homepage/ManWithCoffee.png"
+        src: "images/homepage/ManWithCoffee.jpg"
         alt: "Man with coffee"
       desktop:
         src: "images/homepage/ManWithCoffeeDesktop.jpg"
@@ -60,6 +63,7 @@ solutions:
     visuals:
       device: "images/iphonex2vs.png"
       video: "videos/BSPK_Mobile_Consultant.mp4"
+      videoMobile: "videos/BSPK_Mobile_Consultant_Mobile.mp4"
       name: "consultant"
   - headlineFirstPart:
       - "Loyalty-building"

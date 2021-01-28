@@ -46,7 +46,7 @@ export default {
   text-align center
  
   &__section
-    padding 0 30px 85px
+    padding 0 30px 120px
 
     .heading
       margin-bottom 26px

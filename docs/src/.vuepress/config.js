@@ -21,7 +21,7 @@ module.exports = {
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com'}],
     ['link', { href: 'https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@400;500;700&display=swap', rel: 'stylesheet'}],
     ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: 'favicon.ico?'}],
-    ['script', { src: 'https://www.google.com/recaptcha/api.js?render=explicit', async: true, defer: true }]
+    ['script', { src: 'https://www.google.com/recaptcha/api.js?render=explicit', async: true }]
   ],
 
   /**

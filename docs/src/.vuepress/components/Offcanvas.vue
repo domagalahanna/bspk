@@ -1,7 +1,7 @@
 <template>
   <nav
     class="offcanvas"
-    :class="{ 'offcanvas--open' : isOpen , 'offcanvas--pushed' : isTickerVisible }"
+    :class="{ 'offcanvas--open' : isOpen }"
   >
     <ul 
       class="offcanvas__links"
@@ -37,7 +37,6 @@
 export default {
   props: {
     isOpen: Boolean,
-    isTickerVisible: Boolean
   },
   methods: {
     hideOffcanvas() {

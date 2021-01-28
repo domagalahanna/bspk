@@ -1,9 +1,8 @@
 <template>
   <div 
     class="wrapper"
-    :class="{ 'wrapper--ticker-show' : !isTickerHidden }"
    >
-    <div class="ticker">
+    <!-- <div class="ticker">
       More content is in the works and will be live soon!
       <button 
         class="ticker__close"
@@ -14,7 +13,7 @@
           alt="Close ticker"
         >
       </button>
-    </div>
+    </div> -->
     <header
       class="header"
       :class="{ 'header--hidden' : isHidden }"
@@ -48,11 +47,11 @@ export default {
   data: () => ({
     isScrolled: false,
     isHidden: false,
-    isTickerHidden: false
+    // isTickerHidden: false
   }),
   mounted() {
     this.$root.$on('body-scroll', this.toggleVisibility);
-    this.getTickerHidden();
+    // this.getTickerHidden();
   },
   methods: {
     hidePicker() {
@@ -60,14 +59,14 @@ export default {
         this.$refs.picker.hideContainer();
       }
     },
-    hideTicker() {
-      localStorage.setItem('ticker-hide', true);
-      this.getTickerHidden();
-      this.$emit('hide-ticker');
-    },
-    getTickerHidden() {
-      this.isTickerHidden = localStorage.getItem('ticker-hide');
-    },
+    // hideTicker() {
+    //   localStorage.setItem('ticker-hide', true);
+    //   this.getTickerHidden();
+    //   this.$emit('hide-ticker');
+    // },
+    // getTickerHidden() {
+    //   this.isTickerHidden = localStorage.getItem('ticker-hide');
+    // },
     toggleVisibility(scrollData) {
       if (this.isOffcanvasOpen && window.innerWidth < 992) {
         return;

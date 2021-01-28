@@ -10,7 +10,7 @@
         data-scroll
         data-scroll-speed="1"
       >
-        <img-lazy 
+        <img
           :src="$withBase(solution.image.mobile.src)"
           :alt="solution.image.mobile.alt"
           class="visuals__image visuals__image--mobile"
@@ -37,10 +37,13 @@
               :src="$withBase(solution.visuals.video)"
               :data-visual-id="index"
               muted=""
+              defaultMuted=""
               playsinline=""
               loop=""
               class="screen__video"
-            ></video>
+            >
+              <source :src="isMobile ? $withBase(solution.visuals.videoMobile) : $withBase(solution.visuals.video)" type="video/mp4">
+            </video>
           </div>
         </div>
         <div
@@ -56,17 +59,20 @@
       </div>
       <div 
         class="solution__content"
-        data-scroll
       >
         <span class="solution__counter">
           {{ '0' + (index + 1) }}
         </span>
-        <Heading
-          :firstPartHeadlines="solution.headlineFirstPart"
-          :highlighted="solution.highlighted"
-          :secondPartHeadline="solution.headlineSecondPart"
-          tag="h2"
-        />
+        <div
+          data-scroll
+        >
+          <Heading
+            :firstPartHeadlines="solution.headlineFirstPart"
+            :highlighted="solution.highlighted"
+            :secondPartHeadline="solution.headlineSecondPart"
+            tag="h2"
+          />
+        </div>
         <div class="solution__copy">
           {{ solution.copy }}
         </div>
@@ -82,7 +88,7 @@
           class="solution__more"
           to="contact/"
         >
-          Learn More
+          Learn More <span class="sr-only">about solutions</span>
           <img-lazy 
             :src="$withBase('images/icons/arrow.svg')"
             alt=""
@@ -93,6 +99,17 @@
     </article>
   </section>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    isMobile: false
+  }),
+  mounted() {
+    this.isMobile = window.innerWidth < 500
+  }
+}
+</script>
 
 <style lang="stylus" scoped>
 .container
@@ -315,6 +332,11 @@
     .screen__video
       height 97%
       transform translate(4px, 3px)
+
+  &--consultant
+    .video-replacement
+      transform none
+      width 100%
 
   @media (min-width $MQmd)
     &--tablet

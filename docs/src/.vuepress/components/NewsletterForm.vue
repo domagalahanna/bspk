@@ -1,5 +1,8 @@
 <template>
-  <div class="newsletter-section" data-scroll>
+  <div
+    class="newsletter-section"
+    data-scroll
+  >
     <Heading
       :firstPartHeadlines="['Subscribe to', 'our newsletter']"
       :breakLine="true"
