@@ -15,8 +15,8 @@
               Contact
             </h2>
             <address>
-              Menlo Park, California, USA<br>
-              <a href="tel:+14159152775">+1 415-915-2775</a><br>
+               650 Fremont Avenue<br>
+               Los Altos, CA 94024<br>
               <a href="mailto:contact@bspk.com">contact@bspk.com</a><br>
             </address>
           </div>

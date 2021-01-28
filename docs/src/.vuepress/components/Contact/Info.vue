@@ -15,21 +15,15 @@
     <div class="info__section">
       <address class="info__address">
         <strong>Europe</strong> <br>
-        13-15 rue Taitbout <br>
-        75009 Paris <br>
-        <a href="tel:+330634333728">+33 (0)6 34 33 37 28</a> <br>
-        <a class="underline" href="https://goo.gl/maps/SghnDtn3VK9VLFcDA" target="_blank" rel="noopener noreferral">
-          View map 
-        </a>
+        3 rue St Fiacre <br>
+        75001 Paris <br>
+        France
       </address>
       <address class="info__address">
         <strong>North America</strong> <br>
-        530 Magdalena Avenue <br>
-        Los Altos, CA 94024, USA <br>
-        <a href="tel:+11234567890">(+1) 123 456 7890</a> <br>
-        <a class="underline" href="https://goo.gl/maps/th6xx9fPajHa2ksC6" target="_blank" rel="noopener noreferral">
-          View map 
-        </a>
+        650 Fremont Avenue <br>
+        Los Altos, CA 94024<br>
+        USA
       </address>
     </div>
     <div class="info__section">
