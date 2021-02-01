@@ -27,6 +27,12 @@
       </router-link>
       <div class="header__buttons">
         <!-- <LanguagePicker ref="picker"/> -->
+        <a 
+          href="https://my.bspk.com/admin/company_login"
+          class="header__link"
+        >
+          Login
+        </a>
         <Button link="/contact/">
           Request a demo
         </Button>
@@ -164,10 +170,17 @@ export default {
     height: 100px
     padding 0 30px
 
+    &__link
+      font-size 19px
+      font-weight 500
+
     &__logo
       width 120px
 
     &__buttons
       display flex
       align-items center
+
+      & > :first-child
+        margin-right 30px
 </style>

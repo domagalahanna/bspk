@@ -13,6 +13,11 @@
         </router-link>
       </li>
       <li>
+        <a href="https://my.bspk.com/admin/company_login">
+          Login
+        </a>
+      </li>
+      <li>
         <router-link to="/contact/">
           Request a demo
         </router-link>
