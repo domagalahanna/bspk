@@ -41,6 +41,21 @@
         :isOpen="isOffcanvasOpen"
         @toggle-offcanvas="toggleOffcanvas"
       />
+      <div 
+        v-if="$frontmatter.submenu"
+        class="submenu"
+      >
+        <div class="container">
+          <a 
+            v-for="navLink of $frontmatter.submenuNav"
+            :href="navLink.anchor"
+            class="submenu__anchor"
+            @click="scrollToSection"
+          >
+            {{ navLink.title }}
+          </a>
+        </div>
+      </div>
     </header>
   </div>
 </template>
@@ -60,6 +75,10 @@ export default {
     // this.getTickerHidden();
   },
   methods: {
+    scrollToSection(e) {
+      e.preventDefault();
+      this.$root.$emit('scroll-to', e.target.getAttribute("href"));
+    },
     hidePicker() {
       if(this.$refs.picker) {
         this.$refs.picker.hideContainer();
@@ -97,6 +116,27 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.submenu
+  display none
+
+  @media (min-width $MQlg)
+    position absolute
+    bottom -70px
+    left 0
+    width 100%
+    height 70px
+    background $darkBeige
+    text-align center
+    display flex
+    align-items center
+    justify-content center
+
+    a
+      margin 0 20px
+      font-weight 500
+      color $darkGrey
+      font-size 17px
+
 .wrapper--ticker-show
   height 70px
   position fixed
@@ -172,7 +212,7 @@ export default {
 
     &__link
       font-size 19px
-      font-weight 500
+      font-weight 400
 
     &__logo
       width 120px

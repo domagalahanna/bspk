@@ -31,7 +31,10 @@
         :showPostponeButton="true"
     >
       <div slot="postponeContent">
-          <img :src="$withBase('/images/icons/close.svg')" alt="Close popup">
+          <img 
+            :src="$withBase('/images/icons/close.svg')"
+            alt="Close popup"
+          >
       </div>
 
       <div slot="message">
@@ -71,6 +74,12 @@ export default {
     this.$root.$on('update-locoscroll', this.updateLocoScroll);
     this.$root.$on('locoscroll-scroll-to-errors', this.scrollToLocoScroll);
     this.$root.$on('reload-locoscroll', this.reloadLocoScroll);
+    this.$root.$on('scroll-to', element => {
+      const section = document.querySelector(element);
+      this.scrollInstance.scrollTo(section, {
+        offset: -200
+      });
+    });
     // this.isTickerVisible = !localStorage.getItem('ticker-hide');
 
     import('locomotive-scroll').then(module => {
@@ -105,12 +114,10 @@ export default {
 
       this.scrollInstance.on('call', action => {
         let videoElement = null;
-        let currentTime = 0;
 
         switch(action) {
           case "playVideo" :
             videoElement = document.getElementById('videoElement');
-            currentTime = 3;
             break;
           case "playVisual0" :
             videoElement = document.querySelector("[data-visual-id='0']");
@@ -121,10 +128,14 @@ export default {
           case "playVisual2" :
             videoElement = document.querySelector("[data-visual-id='2']");
             break;
+          case "playAboutVideo" :
+            videoElement = document.getElementById('aboutVideoElement');
+            break;
+          case "playWorkshopVideo" :
+            videoElement = document.getElementById('workshopVideoElement');
+            break;
         }
 
-        videoElement.pause();
-        videoElement.currentTime = currentTime;
         videoElement.play();
       })
     },

@@ -60,7 +60,7 @@
       <div 
         class="solution__content"
       >
-        <span class="solution__counter">
+        <span class="solution__counter counter">
           {{ '0' + (index + 1) }}
         </span>
         <div
@@ -129,9 +129,6 @@ export default {
     font-size 18px
     margin-top 30px
 
-  &__counter
-    display none  
-
   &__cta
     color $accentColor
     font-size 19px
@@ -196,16 +193,6 @@ export default {
       justify-content center
       align-items flex-start
       padding-left 10px
-
-    &__counter
-      secondary-font-family()
-      font-weight 600
-      display block
-      color $darkBeige
-      font-size 120px
-      line-height 1
-      margin-left -5px
-      margin-bottom 10px
 
     &__cta
       justify-content flex-start

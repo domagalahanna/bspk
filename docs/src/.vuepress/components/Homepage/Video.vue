@@ -6,7 +6,6 @@
   >
     <video
       autoplay=""
-      defaultMuted=""
       loop=""
       muted=""
       playsinline=""

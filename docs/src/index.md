@@ -94,4 +94,4 @@ solutions:
 <Homepage-Intro/>
 <Homepage-Video/>
 <Homepage-Solutions/>
-<Homepage-Newsletter/>
+<Newsletter/>

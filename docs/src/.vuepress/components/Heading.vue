@@ -97,4 +97,13 @@ export default {
     &--h2
       font-size 48px
       line-height 48px
+
+    &--internal-intro
+      font-size 52px
+      line-height 48px
+
+    &--counter-sections
+      font-size 42px
+      line-height 48px
+      
 </style>

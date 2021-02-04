@@ -1,0 +1,120 @@
+<template>
+  <section 
+    class="team-section container"
+    :id="$frontmatter.teamSection.id"
+  >
+    <div class="grid-container">
+      <header 
+        data-scroll
+        class="team-section__header"
+      >
+        <Heading
+          :firstPartHeadlines="[$frontmatter.teamSection.title]"
+          tag="h2"
+          tagStyle="h1"
+        />
+        <p>
+          {{ $frontmatter.teamSection.copy }}
+        </p>
+      </header>
+    </div>
+
+    <div
+      class="team-section__visuals grid-container"
+    >
+      <div class="team-section__ceo">
+        <img-lazy
+          :src="$frontmatter.teamSection.ceo.image.src"
+          :alt="$frontmatter.teamSection.ceo.image.alt"
+          width="370"
+          height="440"
+        >
+        </img-lazy>
+        <div class="team-section__description">
+          <p class="team-section__name">
+            {{ $frontmatter.teamSection.ceo.name }}
+          </p>
+          <p class="team-section__position">
+            {{ $frontmatter.teamSection.ceo.position }}
+          </p>
+        </div>
+      </div>
+
+      <div 
+        class="team-section__video"
+        data-scroll
+        data-scroll-call="playWorkshopVideo"
+      >
+        <video
+          autoplay=""
+          loop=""
+          muted=""
+          playsinline=""
+          id="workshopVideoElement"
+        >
+          <source :src="isMobile ? $withBase($frontmatter.teamSection.videoMobile) : $withBase($frontmatter.teamSection.video)" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    isMobile: false
+  }),
+  mounted() {
+    this.$root.$emit('update-locoscroll');
+    this.isMobile = window.innerWidth < 500
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+.team-section
+
+  @media (min-width $MQlg)
+    margin-top 300px
+
+    &__header
+      grid-column 1 / span 9
+
+      p
+        font-size 24px
+        line-height 34px
+        color $darkGrey
+        margin-top 40px
+        margin-bottom 40px
+
+    &__visuals
+      margin-top 50px
+      position relative
+
+    &__description
+      position absolute
+
+    &__ceo
+      grid-column 2 / span 4
+      color $darkGrey
+
+    &__name
+      font-weight 500
+      font-size 25px
+      line-height 40px
+      margin 0
+    
+    &__position
+      margin 0
+      font-size 20px
+      line-height 26px
+
+    &__video
+      grid-column 7 / span 6
+      display flex
+      align-items flex-end
+
+      video
+        width 100%
+      
+</style>
