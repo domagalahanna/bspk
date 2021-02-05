@@ -19,13 +19,24 @@
 
 <style lang="stylus">
 .aligned-text
+  font-size 18px
+  line-height 24px
+  color $darkGrey
+  padding 30px
+
+  p
+    margin-top 0
+    margin-bottom 25px
+
+    &:last-child
+      margin-bottom 0
 
   @media (min-width $MQlg)
     margin-top 175px
+    padding 0
 
     &__wrapper
       font-size 24px
       line-height 34px
-      color $darkGrey
       grid-column 5 / span 6
 </style>

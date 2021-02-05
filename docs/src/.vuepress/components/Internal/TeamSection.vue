@@ -26,8 +26,6 @@
         <img-lazy
           :src="$frontmatter.teamSection.ceo.image.src"
           :alt="$frontmatter.teamSection.ceo.image.alt"
-          width="370"
-          height="440"
         >
         </img-lazy>
         <div class="team-section__description">
@@ -73,9 +71,51 @@ export default {
 
 <style lang="stylus" scoped>
 .team-section
+  video
+    width 100%
+
+  .heading
+    text-align center
+
+  &__header
+    font-size 18px
+    line-height 24px
+    color $darkGrey
+
+    .heading
+      color $black
+
+  &__ceo, &__header
+    padding 0 30px
+  
+  &__name, &__position 
+    font-size 18px
+    color $darkGrey
+    
+  &__name
+    font-weight 500
+    margin-bottom 0
+
+  &__position
+    margin-top 0
+    margin-bottom 115px
+
+  &__video
+    padding 80px 0
+    background $black
+
+  img
+    min-height 375px
+
+  @media (min-width $MQmd)
+    &__ceo
+      text-align center
 
   @media (min-width $MQlg)
     margin-top 300px
+
+    .heading
+      text-align left
 
     &__header
       grid-column 1 / span 9
@@ -96,7 +136,13 @@ export default {
 
     &__ceo
       grid-column 2 / span 4
-      color $darkGrey
+      text-align left
+
+      img
+        min-width 370px
+        min-height 440px
+        height auto
+        width 100%
 
     &__name
       font-weight 500
@@ -113,6 +159,8 @@ export default {
       grid-column 7 / span 6
       display flex
       align-items flex-end
+      padding 0
+      background none
 
       video
         width 100%

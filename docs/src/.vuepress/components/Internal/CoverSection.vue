@@ -9,14 +9,13 @@
       class="cover-section__background"
     >
     </img-lazy>
-    <div
-      class="cover-section__text"
-      data-scroll
-    >
-      <Heading
-        :firstPartHeadlines="[$frontmatter.coverSection.title]"
-        tag="h2"
-      />
+    <div class="cover-section__text">
+      <div data-scroll>
+        <Heading
+          :firstPartHeadlines="[$frontmatter.coverSection.title]"
+          tag="h2"
+        />
+      </div>
       <p>
         {{ $frontmatter.coverSection.content }}
       </p>
@@ -26,11 +25,23 @@
 
 <style lang="stylus">
 .cover-section
+
+  &__background
+    display none
+
+  &__text
+    padding 100px 30px
+    text-align center
+
+    p
+      color $darkGrey
+      font-size 18px
+      line-height 24px
   
   @media (min-width $MQlg)
     height 800px
     margin-top 330px
-    margin-bottom 290px
+    margin-bottom 250px
     overflow hidden
     position relative
 
@@ -47,8 +58,11 @@
       height auto
       position relative
       z-index 1
+      display block
 
     &__text
+      text-align left
+      padding 0
       display flex
       flex-direction column
       justify-content center
@@ -61,6 +75,7 @@
       top 0
 
       p
+        color $white
         font-size 26px
         line-height 34px
         margin-top 25px

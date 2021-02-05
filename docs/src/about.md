@@ -44,6 +44,9 @@ visionSection:
   image:
     src: "/images/about/IMG_1275.jpg"
     alt: ""
+  mobileImage:
+    src: "/images/about/IMG_1275_Mobile.jpg"
+    alt: ""
   title: Our vision
   content:
     - BSPK is a B2B company founded by frustrated customers dreaming of a great shopping experience. We behave like a B2C community and put the customer at the center of everything we do to bring human relationships at the forefront of our clients’ growth strategies. 

@@ -6,8 +6,6 @@
     <header
       v-if="$frontmatter.counterGallery.title && $frontmatter.counterGallery.intro"
       data-scroll
-      data-scroll-speed="1.5"
-      data-scroll-delay="1"
       class="counter-gallery__header container"
     >
       <Heading
@@ -26,15 +24,11 @@
     >
       <div 
         class="counter-section__image"
-        data-scroll
-        data-scroll-speed="1.5"
-        data-scroll-delay="1.5"
       >
         <img-lazy
           :src="section.image.src"
           :alt="section.image.alt"
-          width="585"
-          height="550"
+          
         >
         </img-lazy>
       </div>
@@ -59,8 +53,22 @@
 
 <style lang="stylus" scoped>
 .counter-gallery
+  padding 115px 30px
+
+  &__header
+    margin-bottom 55px
+
+    .heading
+      margin-bottom 15px
+      text-align center
+
+    p
+      color $darkGrey
+      font-size 18px
+      line-height 24px
 
   @media(min-width $MQlg)
+    padding 0
 
     &__header
       text-align center
@@ -73,15 +81,47 @@
         line-height 34px
 
 .counter-section
+  
+  margin-bottom 55px
+
+  &:last-child
+    margin-bottom 0
+
+  .heading
+    margin-top 25px
+    margin-bottom 25px
+
+  &__copy
+    color $darkGrey
+    font-size 18px
+    line-height 24px
+
+  img
+    min-height 300px
+
+  @media(min-width $MQmd)
+
+    &__image
+      text-align center
+
+    .heading
+      text-align center
 
   @media(min-width $MQlg)
     margin-top 180px
+    margin-bottom 0
+
+    &:first-of-type
+      margin-top 80px
 
     &__image
       grid-column 1 / span 6
 
       img
         width 100%
+        height auto
+        min-width 585px
+        min-height 550px
 
     &__content
       grid-column 8 / span 5
@@ -90,6 +130,9 @@
       justify-content flex-end
 
       .heading
+        text-align left
+        margin-top 0
+        margin-bottom 0
         padding-top 25px
         padding-right 100px
         border-top 2px solid $black

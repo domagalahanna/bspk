@@ -25,6 +25,17 @@
           alt="BSPK"
         >
       </router-link>
+      <div class="header__nav">
+        <nav>
+          <router-link
+            v-for="navElement of $themeConfig.nav"
+            :to="navElement.link"
+            class="header__link"
+          >
+            {{ navElement.text }}
+          </router-link>
+        </nav>
+      </div>
       <div class="header__buttons">
         <!-- <LanguagePicker ref="picker"/> -->
         <a 
@@ -125,7 +136,8 @@ export default {
     left 0
     width 100%
     height 70px
-    background $darkBeige
+    background $lightBeige
+    border-bottom 1px solid $darkBeige
     text-align center
     display flex
     align-items center
@@ -199,6 +211,9 @@ export default {
   &__logo
     width 80px
 
+  &__nav
+    display none
+
   &__buttons
     display none
 
@@ -209,6 +224,13 @@ export default {
   @media (min-width $MQlg)
     height: 100px
     padding 0 30px
+
+    &__nav
+      display block
+      position absolute
+      width 100%
+      left 0
+      z-index -1
 
     &__link
       font-size 19px

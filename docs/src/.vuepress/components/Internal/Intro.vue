@@ -22,16 +22,26 @@
 
 <style lang="stylus">
 .interal-intro
+  padding 75px 30px
+  text-align center
+  font-size 24px
+  line-height 30px
+
+  .heading
+    margin-bottom 15px
+
+  &__content
+    color $darkGrey
 
   @media (min-width $MQlg)
-    padding-top 200px
+    padding 200px 0 0
 
     &__heading
       grid-column 1 / span 3
 
     &__content
-
       font-size 50px
       line-height 54px
       grid-column 5 / span 8
+      color $black
 </style>

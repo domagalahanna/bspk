@@ -7,8 +7,7 @@
     <img-lazy
       :src="$withBase($frontmatter.alignedImage.src)"
       :alt="$frontmatter.alignedImage.alt"
-      width="850"
-      height="540"
+
     />
   </section>
 </template>
@@ -17,9 +16,15 @@
 .aligned-image
   grid-column-gap 0
 
+  img
+    width auto
+    height auto
+
   @media (min-width $MQlg)
     margin-top 175px
 
     img
       grid-column 1 / span 8
+      width 850px
+      height 540px
 </style>
