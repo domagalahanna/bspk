@@ -231,6 +231,7 @@ export default {
       width 100%
       left 0
       z-index -1
+      text-align center
 
     &__link
       font-size 19px

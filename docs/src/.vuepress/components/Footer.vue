@@ -10,7 +10,21 @@
           </router-link>
         </div>
         <nav class="footer__nav">
-          <div class="footer__contact">
+          <div class="footer__link">
+            <h2 class="footer__title">
+              Home
+            </h2>
+            <ul>
+              <li v-for="navElement of $themeConfig.nav">
+                <router-link
+                  :to="navElement.link"
+                >
+                  {{ navElement.text }}
+                </router-link>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contact--desktop">
             <h2 class="footer__title">
               Contact
             </h2>
@@ -19,6 +33,25 @@
                Los Altos, CA 94024<br>
               <a href="mailto:contact@bspk.com">contact@bspk.com</a><br>
             </address>
+          </div>
+          <div class="conditions--mobile">
+            <ul>
+              <li>
+                <router-link to="/privacy/">
+                  Privacy
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/terms-of-use/">
+                  Terms of use
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/cookie-policy/">
+                  Cookie Policy
+                </router-link>
+              </li>
+            </ul>
           </div>
           <div class="footer__socials">
             <h2 class="footer__title">
@@ -35,16 +68,28 @@
           </div>
         </nav>
       </div>
+      <div class="footer__contact--mobile">
+        <h2 class="footer__title">
+          Contact
+        </h2>
+        <a href="mailto:contact@bspk.com">contact@bspk.com</a>
+        <ul>
+          <li>
+            <a href="https://twitter.com/bspkluxury" target="_blank">Twitter</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/bspkluxury" target="_blank">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
       <div class="copyrights">
-        <nav>
+        <nav class="conditions--desktop">
           <router-link to="/privacy/">
             Privacy
           </router-link>
-          <span class="divider">—</span>
           <router-link to="/terms-of-use/">
             Terms of use
           </router-link>
-          <span class="mobile-break"></span>
           <router-link to="/cookie-policy/">
             Cookie Policy
           </router-link>
@@ -89,12 +134,20 @@ export default {
     justify-content space-between
     line-height 1.8
     margin-top 40px
+    margin-bottom 40px
 
     .footer__contact
       width 50%
 
+      &--desktop
+        display none
+
     .footer__socials
       width 30%
+      display none
+
+  .footer__contact--mobile
+    line-height 1.8
 
   @media (min-width $MQlg)
     background $lightBeige
@@ -116,12 +169,20 @@ export default {
       line-height 1.6
       margin-top 0
       width 50%
-      justify-content start
+      justify-content space-between
 
       .footer__contact
-        width 50%
-        padding-right 20px
+        width auto
 
+        &--desktop
+          display block
+      
+      .footer__socials
+        display block
+
+    &__contact--mobile
+      display none
+      
 .copyrights
   text-align center
   font-size 18px
@@ -132,6 +193,9 @@ export default {
     font-size 16px
     opacity 0.8
 
+  nav
+    display none
+
   @media (min-width $MQlg)
     text-align left
     margin-top 140px
@@ -139,6 +203,9 @@ export default {
     justify-content space-between
     font-weight 500
     font-size 13px
+
+    nav
+      display block
 
     &__copy
       margin-top 0
@@ -150,20 +217,6 @@ export default {
       &:last-child
         margin-right 0
 
-.divider
-  padding-left 20px
-  padding-right 20px
-  font-weight 500
-
-  @media (min-width $MQlg)
-    display none
-
-.mobile-break
-  display block
-
-  @media (min-width $MQlg)
-    display none
-    
 .footer-circle
   @media (min-width $MQlg)
     height 130px
@@ -182,4 +235,14 @@ export default {
 
 .footer-wrapper
   overflow hidden
+
+.conditions
+
+  &--mobile
+    margin-top 40px
+
+  @media (min-width $MQlg)
+    &--mobile
+      display none
+    
 </style>
