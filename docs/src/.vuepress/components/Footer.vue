@@ -26,12 +26,12 @@
           </div>
           <div class="footer__contact--desktop">
             <h2 class="footer__title">
-              Contact
+              Locations
             </h2>
             <address>
-               650 Fremont Avenue<br>
-               Los Altos, CA 94024<br>
-              <a href="mailto:contact@bspk.com">contact@bspk.com</a><br>
+              Paris<br>
+              San Francisco<br>
+              Los Angeles<br>
             </address>
           </div>
           <div class="conditions--mobile">

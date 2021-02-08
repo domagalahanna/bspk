@@ -64,7 +64,7 @@ counterGallery:
         src: "/images/about/counter1.jpg"
         alt: Blonde woman talking to the phone
       mobileImage:
-        src: "/images/benefits/counter1.jpg"
+        src: "/images/about/counter1.jpg"
         alt: Blonde woman talking to the phone
     - title: Conversion uplifts
       content: Our conversational mobile hub connects augmented clienteling to actionable data resulting in unprecedented transaction uplifts. We help where it typically gets messy.

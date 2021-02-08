@@ -13,18 +13,6 @@
       />
     </div>
     <div class="info__section">
-      <address class="info__address">
-        <strong>Europe</strong> <br>
-        3 rue St Fiacre <br>
-        75001 Paris <br>
-        France
-      </address>
-      <address class="info__address">
-        <strong>North America</strong> <br>
-        650 Fremont Avenue <br>
-        Los Altos, CA 94024<br>
-        USA
-      </address>
     </div>
     <div class="info__section">
       <address class="info__address">

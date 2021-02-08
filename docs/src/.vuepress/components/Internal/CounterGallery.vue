@@ -171,10 +171,13 @@ export default {
           margin-bottom 0
 
   &__image
+
     .desktop
+      margin 0 auto
       display none
 
     .mobile
+      margin 0 auto
       display block
 
   img

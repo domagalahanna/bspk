@@ -12,6 +12,11 @@
           Home
         </router-link>
       </li>
+      <li v-for="navElement of $themeConfig.nav">
+        <router-link :to="navElement.link">
+          {{ navElement.text }}
+        </router-link>
+      </li>
       <li>
         <a href="https://my.bspk.com/admin/company_login">
           Login
