@@ -1,6 +1,7 @@
 <template>
   <section 
     class="counter-gallery"
+    :class="`counter-gallery--${page}`"
     :id="$frontmatter.counterGallery.id"
   >
     <header
@@ -28,7 +29,13 @@
         <img-lazy
           :src="section.image.src"
           :alt="section.image.alt"
-          
+          class="desktop"
+        >
+        </img-lazy>
+        <img-lazy
+          :src="section.mobileImage.src"
+          :alt="section.mobileImage.alt"
+          class="mobile"
         >
         </img-lazy>
       </div>
@@ -43,17 +50,57 @@
             tagStyle="counter-sections"
           />
         </div>
-        <div class="counter-section__copy">
-          {{ section.content }}
+        <div 
+          class="counter-section__copy"
+          :class="{ 'counter-section__copy--list' : list}"
+        >
+          <div v-if="list">
+            <ul>
+              <li v-for="section of section.content">
+                {{ section }}
+              </li>
+            </ul>
+          </div>
+          <div v-else>
+            {{ section.content }}
+          </div>
         </div>
       </div>
     </article>
   </section>
 </template>
 
+<script>
+export default {
+  props: {
+    page: {
+      type: String,
+      required: true
+    },
+    list: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+</script>
+
 <style lang="stylus" scoped>
 .counter-gallery
   padding 115px 30px
+
+  &--benefits
+    padding 0
+    margin-bottom 120px
+
+    .counter-section
+
+      &__content
+        padding 0 30px
+
+      &__image
+        img
+          min-height 250px
 
   &__header
     margin-bottom 55px
@@ -80,8 +127,25 @@
         font-size 24px
         line-height 34px
 
+    &--benefits
+      margin-top 120px
+
+      .counter-section
+        &__content
+          padding 0
+
+        &__image
+          img
+            min-height 660px
+
+    &--about
+      margin-top 
+
+      .counter-section
+        .heading
+          padding-right 100px
+
 .counter-section
-  
   margin-bottom 55px
 
   &:last-child
@@ -96,11 +160,27 @@
     font-size 18px
     line-height 24px
 
+    &--list
+      ul
+        list-style inside
+
+      li
+        margin-bottom 20px
+
+        &:last-child
+          margin-bottom 0
+
+  &__image
+    .desktop
+      display none
+
+    .mobile
+      display block
+
   img
     min-height 300px
 
   @media(min-width $MQmd)
-
     &__image
       text-align center
 
@@ -116,6 +196,12 @@
 
     &__image
       grid-column 1 / span 6
+
+      .desktop
+        display block
+
+      .mobile
+        display none
 
       img
         width 100%
@@ -134,7 +220,6 @@
         margin-top 0
         margin-bottom 0
         padding-top 25px
-        padding-right 100px
         border-top 2px solid $black
 
     &__copy
@@ -142,6 +227,9 @@
       font-size 22px
       line-height 32px
       margin-top 25px
+      
+      &--list
+        font-size 20px
 
     &:nth-of-type(2n)
       .counter-section__content

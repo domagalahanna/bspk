@@ -222,7 +222,7 @@ export default {
     transition transform .4s ease-in-out
 
   @media (min-width $MQlg)
-    height: 100px
+    height 100px
     padding 0 30px
 
     &__nav
@@ -232,6 +232,9 @@ export default {
       left 0
       z-index -1
       text-align center
+
+      a
+        margin 0 20px 
 
     &__link
       font-size 19px

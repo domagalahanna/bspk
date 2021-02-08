@@ -35,6 +35,7 @@
 
   @media (min-width $MQlg)
     padding 200px 0 0
+    text-align left
 
     &__heading
       grid-column 1 / span 3

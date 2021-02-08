@@ -63,14 +63,23 @@ counterGallery:
       image:
         src: "/images/about/counter1.jpg"
         alt: Blonde woman talking to the phone
+      mobileImage:
+        src: "/images/benefits/counter1.jpg"
+        alt: Blonde woman talking to the phone
     - title: Conversion uplifts
       content: Our conversational mobile hub connects augmented clienteling to actionable data resulting in unprecedented transaction uplifts. We help where it typically gets messy.
       image:
         src: "/images/about/counter2.jpg"
         alt: Payment system
+      mobileImage:
+        src: "/images/about/counter2.jpg"
+        alt: Payment system
     - title: Customer lifetime value
       content: We magnify inspiring communications between companies and customers to foster long-lasting loyalty and advocacy.
       image:
+        src: "/images/about/counter3.jpg"
+        alt: Two women laughing at the meeting
+      mobileImage:
         src: "/images/about/counter3.jpg"
         alt: Two women laughing at the meeting
 teamSection:
@@ -97,7 +106,7 @@ coverSection:
 <Internal-AlignedText/>
 <Internal-ShapedInfo/>
 <Internal-VisionSection/>
-<Internal-CounterGallery/>
+<Internal-CounterGallery page="about"/>
 <Internal-TeamSection/>
 <Internal-CoverSection/>
 <Newsletter/>
