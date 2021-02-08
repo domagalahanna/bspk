@@ -27,17 +27,17 @@ shapedInfo:
   - title: Emotionally
     content: From famous companies to favorite brands
     image:
-      src: "/images/about/notebook.jpg"
+      src: "/images/about/notebook.png"
       alt: ""
   - title: Operationally
     content: From functional experts to experience masters
     image:
-      src: "/images/about/clients.jpg"
+      src: "/images/about/clients.png"
       alt: ""
   - title: Commercially
     content: From target customers to brand evangelists
     image:
-      src: "/images/about/shopping.jpg"
+      src: "/images/about/shopping.png"
       alt: ""
 visionSection:
   id: vision-section

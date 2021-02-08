@@ -162,13 +162,26 @@ export default {
 
     &--list
       ul
-        list-style inside
+        list-style none
 
       li
         margin-bottom 20px
+        padding-left 20px
+        position relative
 
         &:last-child
           margin-bottom 0
+
+        &::before
+          content ''
+          width 4px
+          height 4px
+          border-radius 50%
+          background $darkGrey
+          display inline-block
+          position absolute
+          left 3px
+          top 10px
 
   &__image
 
@@ -233,6 +246,13 @@ export default {
       
       &--list
         font-size 20px
+        line-height 28px
+
+        li
+          padding-left 30px
+
+          &::before
+            top 12px
 
     &:nth-of-type(2n)
       .counter-section__content
