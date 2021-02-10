@@ -100,7 +100,7 @@ export default {
 
       &__image
         img
-          min-height 250px
+          min-height 210px
 
   &__header
     margin-bottom 55px
@@ -129,6 +129,7 @@ export default {
 
     &--benefits
       margin-top 120px
+      margin-bottom 220px
 
       .counter-section
         &__content
@@ -139,8 +140,6 @@ export default {
             min-height 660px
 
     &--about
-      margin-top 
-
       .counter-section
         .heading
           padding-right 100px
@@ -194,7 +193,7 @@ export default {
       display block
 
   img
-    min-height 300px
+    min-height 245px
 
   @media(min-width $MQmd)
     &__image

@@ -41,7 +41,7 @@
   @media (min-width $MQlg)
     height 800px
     margin-top 330px
-    margin-bottom 250px
+    margin-bottom 200px
     overflow hidden
     position relative
 

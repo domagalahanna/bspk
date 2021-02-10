@@ -48,6 +48,10 @@
       margin-top 5px
       margin-bottom 55px
 
+  &__image
+    img
+      min-height 188px
+
   @media (min-width $MQmd)
     text-align center
 

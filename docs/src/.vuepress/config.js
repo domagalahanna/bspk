@@ -42,6 +42,10 @@ module.exports = {
       {
         text: 'Benefits',
         link: '/benefits/'
+      },
+      {
+        text: 'Newsroom',
+        link: '/newsroom/'
       }
     ]
   },

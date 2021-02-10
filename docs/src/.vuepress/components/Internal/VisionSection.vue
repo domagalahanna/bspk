@@ -2,7 +2,6 @@
   <div>
     <section 
       class="vision-section container grid-container"
-      data-scroll
       :id="$frontmatter.visionSection.id"
     >
       <div class="vision-section__image">
@@ -21,7 +20,10 @@
         >
         </img-lazy>
       </div>
-      <div class="vision-section__content">
+      <div 
+        data-scroll
+        class="vision-section__content"
+      >
         <Heading
           :firstPartHeadlines="[$frontmatter.visionSection.title]"
           tag="h2"
@@ -34,35 +36,8 @@
         </p>
       </div>
     </section>
-
-    <div
-      data-scroll
-      data-scroll-call="playAboutVideo"
-      class="video-wrapper"
-    >
-      <video
-        autoplay=""
-        loop=""
-        muted=""
-        playsinline=""
-        id="aboutVideoElement"
-      >
-        <source :src="isMobile ? $withBase($frontmatter.visionSection.videoMobile) : $withBase($frontmatter.visionSection.video)" type="video/mp4">
-      </video>
-    </div>
   </div>
 </template>
-
-<script>
-export default {
-  data: () => ({
-    isMobile: false
-  }),
-  mounted() {
-    this.isMobile = window.innerWidth < 500
-  }
-}
-</script>
 
 <style lang="stylus" scoped>
 .vision-section
@@ -71,6 +46,7 @@ export default {
   &__image
     img
       width 100%
+      min-height 230px
 
     &--desktop
       display none
@@ -89,11 +65,11 @@ export default {
       margin-bottom 30px
 
       &:last-child
-        margin-bottom 75px
-      
+        margin-bottom 0
 
   @media (min-width $MQlg)
     margin-top 300px
+    margin-bottom 300px
 
     &__image
       grid-column 1 / span 4
@@ -126,20 +102,4 @@ export default {
 
         &:first-of-type
           margin-top 50px
-
-.video-wrapper
-  padding 80px 0
-  background $black
-
-  video
-    width 100%
-    
-  @media (min-width $MQlg)
-    padding 0
-    background none
-
-    video
-      max-width 770px
-      margin 110px auto 320px
-      display block
 </style>

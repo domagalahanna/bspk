@@ -1,4 +1,4 @@
-<template>
+ <template>
   <section 
     class="team-section container"
     :id="$frontmatter.teamSection.id"
@@ -105,7 +105,7 @@ export default {
     background $black
 
   img
-    min-height 375px
+    min-height 310px
 
   @media (min-width $MQmd)
     &__ceo

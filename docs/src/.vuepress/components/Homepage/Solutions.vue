@@ -90,7 +90,7 @@
         >
           Learn More <span class="sr-only">about solutions</span>
           <img-lazy 
-            :src="$withBase('images/icons/arrow.svg')"
+            :src="$withBase('/images/icons/arrow.svg')"
             alt=""
           />
         </router-link>
