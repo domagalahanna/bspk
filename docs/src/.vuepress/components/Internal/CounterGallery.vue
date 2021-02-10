@@ -114,7 +114,7 @@ export default {
       font-size 18px
       line-height 24px
 
-  @media(min-width $MQlg)
+  @media (min-width $MQlg)
     padding 0
 
     &__header
@@ -196,11 +196,17 @@ export default {
     min-height 245px
 
   @media(min-width $MQmd)
+    display grid
+    grid-template-columns repeat(12, 1fr)
+    grid-column-gap 30px
+
     &__image
       text-align center
+      grid-column 1 / span 6
 
-    .heading
-      text-align center
+    &__content
+      grid-column 7 / span 6
+      text-align left
 
   @media(min-width $MQlg)
     margin-top 180px
@@ -210,8 +216,6 @@ export default {
       margin-top 80px
 
     &__image
-      grid-column 1 / span 6
-
       .desktop
         display block
 

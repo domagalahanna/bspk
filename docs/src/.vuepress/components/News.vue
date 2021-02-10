@@ -37,6 +37,8 @@
 .news
   &__image
     min-height 215px
+    margin 0 auto
+    display block
     
   &__date
     &--desktop
@@ -77,8 +79,23 @@
     line-height 30px
     margin-top 30px
 
+  @media (min-width $MQmd)
+    display grid
+    grid-template-columns repeat(12, 1fr)
+    grid-column-gap 30px
+    padding 0 30px
+
+    &__image
+      grid-column 1 / span 6
+
+    &__content
+      grid-column 7 / span 5
+      
+
   @media (min-width $MQlg)
     padding-bottom 100px
+    padding-left 0
+    padding-right 0
 
     &:first-child
       padding-top 80px
@@ -99,7 +116,7 @@
 
     &__content
       grid-column 6 / span 6
-      padding-left 50px
+      padding 0 0 0 50px
       display flex
       justify-content center
       flex-direction column
@@ -119,5 +136,4 @@
         font-weight 300
         display inline-block
         background #ADA79D
-        transform translateY(33%)
 </style>

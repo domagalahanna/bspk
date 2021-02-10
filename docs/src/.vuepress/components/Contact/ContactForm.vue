@@ -81,7 +81,7 @@
           >
         </div>
         <div class="input-wrapper">
-          <label for="sales-advisor">Number of sales advisor *</label>
+          <label for="sales-advisor">Number of sales advisors *</label>
           <input
             name="Sales-advisor"
             id="sales-advisor"

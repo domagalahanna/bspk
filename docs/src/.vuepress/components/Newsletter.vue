@@ -7,7 +7,7 @@
       data-scroll
     >
       <Heading
-        :firstPartHeadlines="['Speak to consultant', 'to get started']"
+        :firstPartHeadlines="['Speak to a consultant', 'to get started']"
         :breakLine="true"
         tag="h2"
       >
