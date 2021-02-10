@@ -123,7 +123,7 @@
 
     &__title
       font-size 32px
-      line-height 32px
+      line-height 40px
       margin-top 30px
 
     &__info
