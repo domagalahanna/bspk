@@ -134,6 +134,9 @@ export default {
           case "playWorkshopVideo" :
             videoElement = document.getElementById('workshopVideoElement');
             break;
+          case "playTechnologyVideo" :
+            videoElement = document.getElementById('technologyVideoElement');
+            break;
         }
 
         videoElement.play();

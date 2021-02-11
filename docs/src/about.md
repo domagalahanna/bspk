@@ -54,7 +54,8 @@ visionSection:
 counterGallery:
   id: expertise-section
   title: Our expertise
-  intro: "We innovate at the intersection of consumers’ new expectations and our clients’ ambitions. Our expertise revolves around three building blocks unlocking meaningful interactions:"
+  intro: 
+    - "We innovate at the intersection of consumers’ new expectations and our clients’ ambitions. Our expertise revolves around three building blocks unlocking meaningful interactions:"
   sections:
     - title: Customer experience and knowledge
       content: We humanize and democratize real time one-on-one engagement for sales advisors through highly personalized shopping journeys delivering superior insight. Both remotely and in proximity.

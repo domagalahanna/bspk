@@ -9,8 +9,8 @@
       class="aligned-text__wrapper"
     >
       <p
-      v-for="paragraph in $frontmatter.alignedText"
-      v-html="paragraph"
+        v-for="paragraph in $frontmatter.alignedText"
+        v-html="paragraph"
       >
       </p>
     </div>

@@ -6,17 +6,49 @@
   >
     <header
       v-if="$frontmatter.counterGallery.title && $frontmatter.counterGallery.intro"
-      data-scroll
       class="counter-gallery__header container"
     >
-      <Heading
-        :firstPartHeadlines="[$frontmatter.counterGallery.title]"
-        tag="h2"
-        tagStyle="h1"
-      />
-      <p>
-        {{ $frontmatter.counterGallery.intro }}
-      </p>
+      <div data-scroll>
+        <Heading
+          :firstPartHeadlines="[$frontmatter.counterGallery.title]"
+          tag="h2"
+          tagStyle="h1"
+          class="heading--default"
+        />
+        <p
+          v-for="text of $frontmatter.counterGallery.intro"
+          class="counter-gallery__intro"
+        >
+          {{ text }}
+        </p>
+      </div>
+
+      <div
+        data-scroll
+        data-scroll-call="playTechnologyVideo"
+        class="video-wrapper"
+        v-if="$frontmatter.counterGallery.video"
+      >
+        <video
+          autoplay=""
+          loop=""
+          muted=""
+          playsinline=""
+          id="technologyVideoElement"
+        >
+          <source :src="isMobile ? $withBase($frontmatter.counterGallery.video.mobile) : $withBase($frontmatter.counterGallery.video.desktop)" type="video/mp4">
+        </video>
+      </div>
+
+      <div data-scroll>
+        <Heading
+          :firstPartHeadlines="[$frontmatter.counterGallery.subtitle]"
+          tag="h2"
+          tagStyle="h1"
+          class="counter-gallery__subtitle"
+          v-if="$frontmatter.counterGallery.subtitle"
+        />
+      </div>
     </header>
   
     <article
@@ -72,6 +104,9 @@
 
 <script>
 export default {
+  data: () => ({
+    isMobile: false
+  }),
   props: {
     page: {
       type: String,
@@ -81,6 +116,9 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  mounted() {
+    this.isMobile = window.innerWidth < 500
   }
 }
 </script>
@@ -94,13 +132,86 @@ export default {
     margin-bottom 120px
 
     .counter-section
-
       &__content
         padding 0 30px
 
       &__image
         img
           min-height 210px
+
+  &--technology
+    padding 0
+
+    .video-wrapper
+      padding 90px 0
+      background $black
+
+      video
+        width 100%
+
+    .counter-gallery__header
+      display flex
+      flex-direction column-reverse
+      margin-bottom 115px
+
+      & > :first-child
+        padding 0 30px
+
+      .heading--default
+        default-font-family()
+        text-transform none
+        font-weight 400
+        font-size 30px
+        line-height 34px
+        margin-top 93px
+
+    .counter-gallery__intro
+      color $darkGrey
+      font-size 24px
+      line-height 30px
+      margin-bottom 0
+      margin-top 0
+      text-align center
+
+    .counter-gallery__subtitle
+      display none
+
+    .counter-section__content
+      padding 0 30px
+
+    .counter-section:last-child
+      margin-bottom 115px
+
+    .counter-section__image
+      img
+        min-height 300px
+
+    @media (min-width $MQlg)
+      .video-wrapper
+        padding 80px 0 295px
+        background none
+
+      .counter-gallery__header
+        flex-direction column
+
+        .heading--default
+          font-size 50px
+          line-height 54px
+
+      .counter-gallery__intro
+        font-weight 300
+        font-size 34px
+        line-height 40px
+
+      .counter-gallery__subtitle
+        display block
+
+      .counter-section:last-child
+        margin-bottom 200px
+
+      .counter-section__image
+        img
+          min-height 550px
 
   &__header
     margin-bottom 55px
