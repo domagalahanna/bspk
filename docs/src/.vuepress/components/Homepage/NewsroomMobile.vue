@@ -9,8 +9,9 @@
       paginationActiveColor="#DB420F"
     >
       <Slide 
-        v-for="testimonial in $frontmatter.testimonials"
+        v-for="(testimonial, i) in $frontmatter.testimonials"
         class="testimonials__single"
+        :key="i"
       >
         <img :src="$withBase(testimonial.logo)" alt="">
         <p>

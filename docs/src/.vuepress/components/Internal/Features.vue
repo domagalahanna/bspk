@@ -122,13 +122,17 @@
     padding-left 50px
     padding-right 20px
 
+    &__list
+      font-size 20px
+      line-height 26px
+
     &__header
       flex-direction column
       justify-content start
       align-items start
 
     &__title
-      margin-top 15px
+      margin-top 20px
       margin-left 0
 
     &__image

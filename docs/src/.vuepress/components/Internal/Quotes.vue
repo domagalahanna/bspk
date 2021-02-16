@@ -23,8 +23,9 @@
         paginationActiveColor="#DB420F"
       >
         <Slide 
-          v-for="quote in $frontmatter.quotes.items"
+          v-for="(quote, i) in $frontmatter.quotes.items"
           class="quote"
+          :key="i"
         >
           <p class="quote__content">
             "{{ quote.content }}"
@@ -38,8 +39,9 @@
 
     <div class="quotes__content quotes__content--desktop grid-container">
       <article
-        v-for="quote in $frontmatter.quotes.items"
+        v-for="(quote, i) in $frontmatter.quotes.items"
         class="quote"
+        :key="i"
       >
         <p class="quote__content">
           {{ quote.content }}
@@ -50,7 +52,7 @@
       </article>
       <article
         class="quote quote--image"
-        :style="{ backgroundImage: `url(${$frontmatter.quotes.image})` }"
+        :style="{ backgroundImage: `url(${$withBase($frontmatter.quotes.image)})` }"
       >
       </article>
     </div>
@@ -82,8 +84,11 @@ export default {
     line-height 30px
     color $darkGrey
 
-  &__content
+  &__content 
     margin-bottom 100px
+
+    &--desktop
+      display none
 
   @media (min-width $MQlg)
     &__header

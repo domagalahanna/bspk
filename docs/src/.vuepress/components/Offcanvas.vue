@@ -69,11 +69,12 @@ export default {
   transition all 0.3s ease
   transform translateY(-100%)
   visibility hidden
+  height calc(100vh - 60px)
+  overflow scroll
 
   &__links
     line-height 2.25
     padding 28px
-    border-bottom 1px solid $grey
 
     & > *
       &:last-child

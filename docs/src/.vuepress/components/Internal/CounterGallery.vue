@@ -193,6 +193,9 @@ export default {
 
       .counter-gallery__header
         flex-direction column
+        
+        .heading
+          margin-bottom 40px
 
         .heading--default
           font-size 50px
@@ -200,8 +203,8 @@ export default {
 
       .counter-gallery__intro
         font-weight 300
-        font-size 34px
-        line-height 40px
+        font-size 40px
+        line-height 44px
 
       .counter-gallery__subtitle
         display block
@@ -275,7 +278,7 @@ export default {
         list-style none
 
       li
-        margin-bottom 20px
+        margin-bottom 10px
         padding-left 20px
         position relative
 
@@ -294,7 +297,6 @@ export default {
           top 10px
 
   &__image
-
     .desktop
       margin 0 auto
       display none
@@ -325,6 +327,11 @@ export default {
 
     &:first-of-type
       margin-top 80px
+
+    &__copy
+      &--list
+        li
+          margin-bottom 5px
 
     &__image
       .desktop

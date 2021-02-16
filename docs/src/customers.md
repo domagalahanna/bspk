@@ -43,6 +43,6 @@ alignedCarousel:
 <Internal-AlignedImage/>
 <ClientOnly>
   <Internal-Quotes/>
-  <Internal-AlignedCarousel/>
 </ClientOnly>
+<Internal-AlignedCarousel/>
 <Newsletter/>
