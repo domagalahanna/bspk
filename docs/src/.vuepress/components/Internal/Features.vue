@@ -26,7 +26,8 @@
         </header>
         <ul class="feature__list styled-list">
           <li
-            v-for="item of feature.list"
+            v-for="(item, index) of feature.list"
+            :key="index"
           >
             {{ item }}
           </li>
@@ -49,6 +50,9 @@
     line-height 30px
 
   @media (min-width $MQlg)
+    .grid-container
+      grid-gap 20px
+
     &__intro
       text-align center
       max-width 550px
@@ -119,12 +123,15 @@
 
   @media (min-width $MQlg)
     grid-column span 4
-    padding-left 50px
+    padding-left 20px
     padding-right 20px
 
     &__list
       font-size 20px
       line-height 26px
+
+      li
+        padding-right 20px
 
     &__header
       flex-direction column

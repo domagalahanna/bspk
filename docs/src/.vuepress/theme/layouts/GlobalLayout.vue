@@ -71,6 +71,11 @@ export default {
     }
   },
   mounted() {
+    import('locomotive-scroll').then(module => {
+      this.locomotiveScroll = module.default;
+      this.initLocoScroll();
+    });
+    
     this.$root.$on('update-locoscroll', this.updateLocoScroll);
     this.$root.$on('locoscroll-scroll-to-errors', this.scrollToLocoScroll);
     this.$root.$on('reload-locoscroll', this.reloadLocoScroll);
@@ -81,11 +86,6 @@ export default {
       });
     });
     // this.isTickerVisible = !localStorage.getItem('ticker-hide');
-
-    import('locomotive-scroll').then(module => {
-      this.locomotiveScroll = module.default;
-      this.initLocoScroll();
-    });
   },
   methods: {
     toggleOffcanvas() {
