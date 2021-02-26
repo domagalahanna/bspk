@@ -24,7 +24,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer__contact--desktop">
+          <div class="footer__contact">
             <h2 class="footer__title">
               Locations
             </h2>
@@ -33,25 +33,6 @@
               San Francisco<br>
               Los Angeles<br>
             </address>
-          </div>
-          <div class="conditions--mobile">
-            <ul>
-              <li>
-                <router-link to="/privacy/">
-                  Privacy
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/terms-of-use/">
-                  Terms of use
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/cookie-policy/">
-                  Cookie Policy
-                </router-link>
-              </li>
-            </ul>
           </div>
           <div class="footer__socials">
             <h2 class="footer__title">
@@ -69,18 +50,39 @@
         </nav>
       </div>
       <div class="footer__contact--mobile">
-        <h2 class="footer__title">
-          Contact
-        </h2>
-        <a href="mailto:contact@bspk.com">contact@bspk.com</a>
-        <ul>
-          <li>
-            <a href="https://twitter.com/bspkluxury" target="_blank">Twitter</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/bspkluxury" target="_blank">LinkedIn</a>
-          </li>
-        </ul>
+        <div>
+          <h2 class="footer__title">
+            Contact
+          </h2>
+          <a href="mailto:contact@bspk.com">contact@bspk.com</a>
+          <ul>
+            <li>
+              <a href="https://twitter.com/bspkluxury" target="_blank">Twitter</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/bspkluxury" target="_blank">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+        <div class="conditions--mobile">
+          <ul>
+            <li>
+              <router-link to="/privacy/">
+                Privacy Policy
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/terms-of-use/">
+                Terms of use
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/cookie-policy/">
+                Cookie Policy
+              </router-link>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="copyrights">
         <nav class="conditions--desktop">
@@ -137,8 +139,6 @@ export default {
     margin-bottom 40px
 
     .footer__contact
-      width 50%
-
       &--desktop
         display none
 
@@ -148,6 +148,8 @@ export default {
 
   .footer__contact--mobile
     line-height 1.8
+    display flex
+    justify-content space-between
 
   @media (min-width $MQlg)
     background $lightBeige
