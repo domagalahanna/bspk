@@ -55,7 +55,10 @@ module.exports = {
         text: 'Newsroom',
         link: '/newsroom/'
       }
-    ]
+    ],
+    cookieNotice: {
+      text: 'This website uses cookies to improve your experience. Test'
+    }
   },
   plugins: {
     'robots': {

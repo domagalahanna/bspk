@@ -130,7 +130,7 @@ export default {
 .submenu
   display none
 
-  @media (min-width $MQlg)
+  @media (min-width $MQxl)
     position absolute
     bottom -70px
     left 0
@@ -221,7 +221,7 @@ export default {
     transform translateY(-100%)
     transition transform .4s ease-in-out
 
-  @media (min-width $MQlg)
+  @media (min-width $MQxl)
     height 100px
     padding 0 30px
 

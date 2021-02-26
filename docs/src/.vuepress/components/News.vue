@@ -94,6 +94,8 @@
 
   @media (min-width $MQlg)
     padding-bottom 100px
+
+  @media (min-width $MQxl)
     padding-left 0
     padding-right 0
 

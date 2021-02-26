@@ -52,16 +52,17 @@
     img
       min-height 188px
 
-  @media (min-width $MQmd)
+  @media (min-width $MQsm)
     text-align center
 
   @media (min-width $MQlg)
-    padding 0
-    margin-top 175px
     text-align left
+    margin-top 45px
 
     &__info
       grid-column-gap 0
+      display grid
+      grid-template-columns repeat(12, 1fr)
 
       &:first-child
 
@@ -76,7 +77,6 @@
 
         .shaped-info__image
           grid-column 5 / span 4
-
 
         .shaped-info__content
           grid-column 9 / span 4
@@ -121,4 +121,8 @@
         line-height 26px
         color $darkGrey
         margin-bottom 0
+
+  @media (min-width $MQxl)
+    padding 0
+    margin-top 175px
 </style>

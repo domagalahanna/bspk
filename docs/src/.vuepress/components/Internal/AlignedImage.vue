@@ -20,11 +20,21 @@
     width auto
     height auto
 
+  @media (min-width $MQmd)
+    img
+      min-height 516px
+
   @media (min-width $MQlg)
+    img
+      width 100%
+      min-height 688px
+
+  @media (min-width $MQxl)
     margin-top 175px
 
     img
       grid-column 1 / span 8
       width 850px
       height 540px
+      min-height auto
 </style>

@@ -90,7 +90,7 @@ export default {
     &--desktop
       display none
 
-  @media (min-width $MQlg)
+  @media (min-width $MQxl)
     &__header
       margin-top 30px
 
@@ -122,7 +122,7 @@ export default {
     text-align center
     color $darkGrey
 
-  @media (min-width $MQlg)
+  @media (min-width $MQxl)
     background $darkBeige
     border-radius 0 60px 0 60px
     height 350px

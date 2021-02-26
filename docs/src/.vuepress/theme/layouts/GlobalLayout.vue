@@ -38,7 +38,7 @@
       </div>
 
       <div slot="message">
-        This website uses cookies to improve your experience. <router-link to="/cookie-policy">See Cookie Policy</router-link>
+        {{ $themeConfig.cookieNotice.text }} <router-link to="/cookie-policy">See Cookie Policy</router-link>
       </div>
       <div slot="acceptContent">
           Accept
@@ -181,6 +181,6 @@ export default {
   &--pushed
     padding-top 130px
 
-  @media (min-width $MQlg)
+  @media (min-width $MQxl)
     padding-top 100px
 </style>

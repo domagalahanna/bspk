@@ -61,6 +61,6 @@ export default {
       &:last-child
         transform translateY(-9px) translateX(0px) rotate(-135deg)
 
-  @media (min-width $MQlg)
+  @media (min-width $MQxl)
     display none
 </style>

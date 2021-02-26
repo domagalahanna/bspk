@@ -134,15 +134,18 @@ img
 .counter
   display none
 
-  @media (min-width $MQlg)
+  @media (min-width $MQmd)
     secondary-font-family()
     font-weight 600
     display block
     color $darkBeige
-    font-size 120px
+    font-size 80px
     line-height 1
     margin-left -5px
     margin-bottom 10px
+
+  @media (min-width $MQlg)
+    font-size 120px
 
 .cookie__floating
   background $black

@@ -2,16 +2,15 @@
   <section 
     class="newsletter container"
   >
-    <div 
-      class="newsletter__section"
-      data-scroll
-    >
-      <Heading
-        :firstPartHeadlines="['Speak to a consultant', 'to get started']"
-        :breakLine="true"
-        tag="h2"
-      >
-      </Heading>
+    <div class="newsletter__section">
+      <div data-scroll>
+        <Heading
+          :firstPartHeadlines="['Speak to a consultant', 'to get started']"
+          :breakLine="true"
+          tag="h2"
+        >
+        </Heading>
+      </div>
       <Button 
         link="/contact/"
         size="large"
@@ -57,7 +56,7 @@ export default {
 
     &__section
       width 50%
-      padding 100px 0 170px
+      padding 100px 0
       display flex
       flex-direction column
       justify-content space-between
@@ -65,4 +64,8 @@ export default {
 
       .heading
         margin-bottom 30px
+
+  @media (min-width $MQxl)
+    &__section
+      padding 100px 0 170px
 </style>

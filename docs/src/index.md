@@ -8,7 +8,7 @@ hero:
   highlighted: "for all"
   ctaCopy: "Request a Demo"
   ctaLink: "contact/"
-  content: "We help brands and retailers map tailored user journeys capturing rich data to drive sustainable growth and loyalty."
+  content: "BSPK helps companies map tailored user journeys capturing rich data to drive sustainable growth and loyalty."
   video: "videos/HeroVideo.mp4"
   videoMobile: "videos/HeroVideoMobile.mp4"
 testimonials:

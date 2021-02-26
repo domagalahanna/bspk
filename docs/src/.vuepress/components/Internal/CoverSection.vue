@@ -37,10 +37,10 @@
       color $darkGrey
       font-size 18px
       line-height 24px
-  
+
   @media (min-width $MQlg)
-    height 800px
-    margin-top 330px
+    height 600px
+    margin-top 130px
     margin-bottom 200px
     overflow hidden
     position relative
@@ -81,4 +81,8 @@
         margin-top 25px
         max-width 520px
         text-align center
+
+  @media (min-width $MQxl)
+    margin-top 330px
+    height 800px
 </style>

@@ -188,6 +188,11 @@ export default {
 
     @media (min-width $MQlg)
       .video-wrapper
+        background none
+        padding 80px 0 50px
+
+    @media (min-width $MQxl)
+      .video-wrapper
         padding 80px 0 295px
         background none
 
@@ -228,11 +233,14 @@ export default {
       font-size 18px
       line-height 24px
 
-  @media (min-width $MQlg)
-    padding 0
-
+  @media (min-width $MQmd)
     &__header
       text-align center
+
+  @media (min-width $MQlg)
+    padding 0 30px
+
+    &__header
       max-width 770px
       margin 0 auto
 
@@ -242,7 +250,7 @@ export default {
         line-height 34px
 
     &--benefits
-      margin-top 120px
+      margin-top 0
       margin-bottom 220px
 
       .counter-section
@@ -251,12 +259,41 @@ export default {
 
         &__image
           img
-            min-height 660px
+            min-height 440px
+
+        &:first-child
+          margin-top 0
+
+    &--technology
+      .counter-section
+        &__image
+            img
+              min-height 440px
 
     &--about
       .counter-section
         .heading
           padding-right 100px
+
+  @media (min-width $MQxl)
+    padding 0
+
+    &--benefits
+      margin-top 120px
+
+      .counter-section
+        &:first-child
+          margin-top 80px
+
+        &__image
+          img
+            min-height 660px
+
+    &--technology
+      .counter-section
+        &__image
+            img
+              min-height 560px
 
 .counter-section
   margin-bottom 55px
@@ -317,21 +354,19 @@ export default {
       text-align center
       grid-column 1 / span 6
 
+    img
+      min-height 340px
+
     &__content
       grid-column 7 / span 6
       text-align left
 
   @media(min-width $MQlg)
-    margin-top 180px
-    margin-bottom 0
+    img
+      min-height 466px
 
     &:first-of-type
       margin-top 80px
-
-    &__copy
-      &--list
-        li
-          margin-bottom 5px
 
     &__image
       .desktop
@@ -339,6 +374,15 @@ export default {
 
       .mobile
         display none
+
+  @media(min-width $MQxl)
+    margin-top 180px
+    margin-bottom 0
+
+    &__copy
+      &--list
+        li
+          margin-bottom 5px
 
       img
         width 100%

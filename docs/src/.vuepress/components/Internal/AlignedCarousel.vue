@@ -102,6 +102,11 @@ export default {
     text-align center
 
   @media (min-width $MQlg)
+    &__list
+      font-size 24px
+      margin-top 60px
+
+  @media (min-width $MQxl)
     margin-bottom 200px
     margin-top 200px
 

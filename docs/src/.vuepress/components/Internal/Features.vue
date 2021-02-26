@@ -49,14 +49,19 @@
     font-size 24px
     line-height 30px
 
-  @media (min-width $MQlg)
+  @media (min-width $MQmd)
     .grid-container
       grid-gap 20px
+      display grid
+      grid-template-columns repeat(12, 1fr)
 
     &__intro
       text-align center
+
+  @media (min-width $MQxl)
+    &__intro
       max-width 550px
-      margin 150px auto 75px 
+      margin 150px auto 75px
 
 .feature
   &__header

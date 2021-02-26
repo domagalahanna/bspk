@@ -67,7 +67,23 @@
       &:last-child
         margin-bottom 0
 
+  @media (min-width $MQmd)
+    &__image
+      img
+        min-height 555px
+
   @media (min-width $MQlg)
+    margin-bottom 100px
+
+    &__content
+      font-size 24px
+      line-height 1.2
+
+    &__image
+      img
+        min-height 740px
+
+  @media (min-width $MQxl)
     margin-top 300px
     margin-bottom 300px
 
