@@ -4,11 +4,6 @@
     class="quotes container"
   >
     <header class="quotes__header">
-      <Heading
-        :firstPartHeadlines="[$frontmatter.quotes.title]"
-        tag="h2"
-        tagStyle="internal-intro"
-      />
       <p class="quotes__intro">
         {{ $frontmatter.quotes.intro  }}
       </p>
@@ -83,6 +78,7 @@ export default {
     font-size 24px
     line-height 30px
     color $darkGrey
+    margin-top 0
 
   &__content 
     margin-bottom 100px

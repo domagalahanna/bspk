@@ -49,7 +49,6 @@
       </h2>
       <p>
         Our Website uses cookies to distinguish you from other users of our Website. This helps us to provide you with a good experience when you browse our Website and allows us to improve our Website. A cookie will be stored on your computer. Generally, cookies work by assigning to your computer a unique number that has no meaning outside of the Website. The cookies do not contain any personal information and we use them only to personalize and improve your experience.
-        Take a look at our Cookie Policy to find out more on how we use Cookies.
       </p>
       <h2>
         3. App Analytics
@@ -58,7 +57,7 @@
         We use mobile analytics to allow us to better understand the functionality of BSPK on your phone. This software may record information such as how often you use the application, events and interactions that occur within the application, aggregated usage and performance data.
       </p>
       <p>
-        Additionally, in the event that BSPK might crash on your mobile device we will receive information about your mobile device model and OS version, which allows us to identify and fix bugs and otherwise improve the performance of Hero.
+        Additionally, in the event that BSPK might crash on your mobile device we will receive information about your mobile device model and OS version, which allows us to identify and fix bugs and otherwise improve the performance of BSPK.
       </p>
       <h2>
         4. Uses made of the information
@@ -110,9 +109,6 @@
             <li>
               analytics and search engine providers that assist us in the improvement and optimisation of the Website;
             </li>
-            <li>
-              credit reference agencies for assessing your credit score where this is a condition of us entering a contract with you.
-            </li>
           </ul>
         </li>
       </ul>
@@ -122,9 +118,6 @@
       </p>
       <ul>
         <li>
-          If we sell or buy any business or assets, in which case we will disclose your personal data to the prospective seller or buyer of such business or assets.
-        </li>
-        <li>
           If we are under a duty to disclose or share your personal data to comply with any legal obligation, or to enforce or apply our Terms of Use.
         </li>
       </ul>
@@ -132,7 +125,7 @@
         Where we store your personal data
       </h2>
       <p>
-        The data that we collect from you will generally be transferred to, and stored at, a destination inside the European Economic Area (“EEA”) however, may also be processed by our staff working in the US. We can confirm that we have the appropriate safeguards in place to ensure the safe transfer and storage between countries. By submitting your personal data, you agree to this transfer, storing or processing. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this privacy policy.
+        The data that we collect from you will generally be transferred to, and stored at, a destination inside the European Economic Area (“EEA”). By submitting your personal data, you agree to this storing or processing. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this privacy policy.
         Unfortunately, the transmission of information via the internet is not completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our Website; any transmission is at your own risk. Once we have received your information, we will use strict procedures and security features to try to prevent unauthorised access.
       </p>
       <h2>

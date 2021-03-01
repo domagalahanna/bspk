@@ -146,7 +146,7 @@ export default {
       width 30%
       display none
 
-  .footer__contact--mobile
+  &__contact--mobile
     line-height 1.8
     display flex
     justify-content space-between

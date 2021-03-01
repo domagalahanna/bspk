@@ -9,7 +9,6 @@ alignedImage:
   src: "/images/customers/BSPK_Customer.jpg"
   alt: "Elegant customer having a mobile conversation"
 quotes:
-  title: Our clients
   intro: "Many brands adopted BSPK to elevate their customer experience strategy. Here’s what some of them told us:"
   items:
     - content: We now do all of our sales engagement via BSPK. We are so fortunate to have their technology deployed in our stores.

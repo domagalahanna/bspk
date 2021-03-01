@@ -114,6 +114,9 @@ export default {
     img
       min-height 440px
 
+    &__header p
+      text-align center
+
   @media (min-width $MQlg)
     margin-top 150px
 
@@ -132,6 +135,7 @@ export default {
         color $darkGrey
         margin-top 40px
         margin-bottom 40px
+        text-align left
 
     &__visuals
       margin-top 50px

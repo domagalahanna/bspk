@@ -72,6 +72,9 @@
       img
         min-height 555px
 
+    &__content
+      text-align center
+
   @media (min-width $MQlg)
     margin-bottom 100px
 
@@ -90,6 +93,9 @@
     &__image
       grid-column 1 / span 4
 
+      img
+        min-height 555px
+
       &--desktop
         display block
 
@@ -105,6 +111,7 @@
       justify-content center
       margin-top 0
       padding 0
+      text-align left
 
       .heading
         text-align left

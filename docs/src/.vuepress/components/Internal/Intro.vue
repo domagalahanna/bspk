@@ -33,6 +33,9 @@
   &__content
     color $darkGrey
 
+  @media (min-width $MQmd)
+    padding 100px 120px 100px
+
   @media (min-width $MQlg) 
     padding 100px 100px 100px
     font-size 30px
