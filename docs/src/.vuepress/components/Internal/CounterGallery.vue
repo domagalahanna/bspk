@@ -379,6 +379,9 @@ export default {
     margin-top 180px
     margin-bottom 0
 
+    img
+      min-height 535px
+
     &__copy
       &--list
         li
