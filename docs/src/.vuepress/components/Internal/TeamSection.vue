@@ -120,6 +120,14 @@ export default {
   @media (min-width $MQlg)
     margin-top 150px
 
+    &__header
+      p
+        font-size 24px
+        line-height 34px
+        color $darkGrey
+        margin-top 40px
+        margin-bottom 40px
+
   @media (min-width $MQxl)
     margin-top 300px
 
@@ -130,11 +138,6 @@ export default {
       grid-column 1 / span 9
 
       p
-        font-size 24px
-        line-height 34px
-        color $darkGrey
-        margin-top 40px
-        margin-bottom 40px
         text-align left
 
     &__visuals
