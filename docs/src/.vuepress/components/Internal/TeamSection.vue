@@ -126,7 +126,7 @@ export default {
         line-height 34px
         color $darkGrey
         margin-top 40px
-        margin-bottom 40px
+        margin-bottom 40pxx
 
   @media (min-width $MQxl)
     margin-top 300px
