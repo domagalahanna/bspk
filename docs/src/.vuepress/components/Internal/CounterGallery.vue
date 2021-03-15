@@ -16,8 +16,9 @@
           class="heading--default"
         />
         <p
-          v-for="text of $frontmatter.counterGallery.intro"
+          v-for="(text, index) of $frontmatter.counterGallery.intro"
           class="counter-gallery__intro"
+          :key="index"
         >
           {{ text }}
         </p>
@@ -260,6 +261,13 @@ export default {
         &__image
           img
             min-height 440px
+
+        &__copy--list
+          li
+            margin-bottom 25px
+
+            &:last-child
+              margin-bottom 0
 
         &:first-child
           margin-top 0

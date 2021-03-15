@@ -3,7 +3,7 @@ title: Benefits
 permalink: /benefits
 intro:
   title: Benefits
-  content: The emotional connections we power provide practical benefits, and deliver predictable business results
+  content: The emotional connections we power enable improved customer satisfaction and increase sales
   id: benefits-section
 counterGallery:
   id: counter-section
@@ -12,9 +12,9 @@ counterGallery:
       content: 
         - Increased order average value (cross-selling, guided selling, and up selling)
         - Increased customer satisfaction & repeat purchase
-        - Improvements in customer loyalty and CLVT
-        - Monetized customer experience
-        - Incremental sales with all client segments (vs just VIP/Cs)
+        - Improvements in customer loyalty and life-time value
+        - Improved customer ambassadorship
+        - Additional sales with all client segments
       image:
         src: "/images/benefits/BSPK_Sales.jpg"
         alt: Blonde woman talking to the phone
@@ -23,10 +23,10 @@ counterGallery:
         alt: Blonde woman talking to the phone
     - title: DATA PERFORMANCE
       content: 
-        - Ability to map each journey for advanced customer knowledge
-        - Higher customer data quality (more contactable shoppers = more selling opportunities)
-        - Scale where CRM is not able to
-        - Better, faster and actionable insights serving experiences and informing new product development
+        - Ability to map customer knowledge to advanced journeys
+        - Imporive quality of customer data (more contactable shoppers = more selling opportunities)
+        - Realize the last mile of your CRM strategy
+        - Immediate customer feedback informing merchandising decisions
       image:
         src: "/images/benefits/BSPK_Data.jpg"
         alt: Payment system
@@ -35,11 +35,11 @@ counterGallery:
         alt: Blonde woman talking to the phone
     - title: TEAM PERFORMANCE
       content: 
-        - Team motivation and productivity (BSPK brings more sales, customers, and fun!)
-        - Real-time experience curation with prospective, existing, or lapsed customers
-        - Teams workload automation without additional resources / training
-        - Protect sales advisors’ jobs with remote client engagement technology (i.e COVID-19 store closures)
-        - All interactions and history retained if sales advisors leave
+        - Improve team motivation and productivity
+        - Develop new and proactive client and prospect engagement skills
+        - Scale the tasks of sales advisors to accomplish more in less time
+        - "Allow sales teams to engage clients across all channels: e-commerce, in-store or via distant selling"
+        - Control transfer of customer knowledge if teams turn over
       image:
         src: "/images/benefits/BSPK_Performance.jpg"
         alt: Two women laughing at the meeting
@@ -48,9 +48,9 @@ counterGallery:
         alt: Blonde woman talking to the phone
     - title: CUSTOMER ENGAGEMENT PERFORMANCE
       content: 
-        - Measurable engagement metric through unique features
-        - Improved customer satisfaction
-        - Increased NPS, word-of-mouth
+        - Improved ability to quantify customer engagement
+        - Higher customer satisfaction
+        - Increased net promoter score and word of mouth
       image:
         src: "/images/benefits/BSPK_HappyCustomer.jpg"
         alt: Two women laughing at the meeting
