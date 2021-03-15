@@ -1,5 +1,6 @@
 ---
-title: Human connections elevating customer experiences for all
+metaTitle: "BSPK  |  Grow your retail sales with the easiest virtual clienteling solution integrated with Cegid Y2, Salesforce and more."
+title: "Homepage"
 hero:
   headlines:
     - "Human connections"

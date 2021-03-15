@@ -45,14 +45,6 @@
     overflow hidden
     position relative
 
-    &::before
-      content ''
-      position absolute
-      width 100%
-      height 100%
-      background alpha($black, 0.44)
-      z-index 2
-
     &__background
       width 100%
       height auto
@@ -67,7 +59,6 @@
       flex-direction column
       justify-content center
       align-items center
-      color $white
       z-index 3
       position absolute
       width 100%
@@ -75,7 +66,7 @@
       top 0
 
       p
-        color $white
+        color $black
         font-size 26px
         line-height 34px
         margin-top 25px

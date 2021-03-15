@@ -7,7 +7,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: 'We help brands and retailers map tailored user journeys capturing rich data to drive sustainable growth and loyalty.',
+  description: 'Connect your customers to sales advisors with engaging SMS and video capabilities for your website, store, and distant selling.',
 
   /**
    * Extra tags to be injected to the page HTML `<head>`

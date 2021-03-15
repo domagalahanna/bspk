@@ -15,14 +15,14 @@ submenuNav:
     anchor: "#global-section"
 intro:
   title: Our mission
-  content: To tailor differentiated customer experiences forging the most sustainable relationships
+  content: To create a better shopping experience for all people
   id: mission-section
 alignedImage:
   src: "/images/about/HappyWomenCustomer.jpg"
   alt: "Happy Customers"
 alignedText:
-  - Our name epitomizes our mission. BSPK a.k.a. bespoke, was conceived to customize exclusive user journeys capturing rich data while making each customer feel unique and inspired by informed recommendations.
-  - Our proprietary engagement technology powers personalized human connections at the heart of <strong>transformative outcomes for our clients:</strong>
+  - Our name represents our mission. BSPK a.k.a. bespoke, was conceived to create inclusive customer journeys through data while making each customer feel unique.
+  - Our proprietary engagement technology powers personalized human connections at the heart of <strong>transformative outcomes for our customers:</strong>
 shapedInfo:
   - title: Emotionally
     content: From famous companies to favorite brands
@@ -49,24 +49,23 @@ visionSection:
     alt: ""
   title: Our vision
   content:
-    - BSPK is a B2B company founded by inspired customers dreaming of a great shopping experience. We behave like a B2C community and put the customer at the center of everything we do to bring human relationships at the forefront of our clients’ growth strategies. 
-    - We are progressive enablers of the most innovative social connector in customer journey digitization.
+    - BSPK is a B2B company founded by inspired customers envisioning a better shopping experience. We behave like a B2C community and put the customer at the center of everything we do to bring human relationships at the forefront of our clients’ growth strategies.
 counterGallery:
   id: expertise-section
   title: Our expertise
   intro: 
-    - "We innovate at the intersection of consumers’ new expectations and our clients’ ambitions. Our expertise revolves around three building blocks unlocking meaningful interactions:"
+    - "We innovate at the intersection of consumers’ growing expectations and our customers ambitions. Our expertise covers three building blocks:"
   sections:
     - title: Customer experience and knowledge
-      content: We humanize and democratize real time one-on-one engagement for sales advisors through highly personalized shopping journeys delivering superior insight. Both remotely and in proximity.
+      content: We enable relevant and personalized customer engagement to drive sales and improve satisfaction.
       image:
         src: "/images/about/counter1.jpg"
         alt: Blonde woman talking to the phone
       mobileImage:
         src: "/images/about/counter1.jpg"
         alt: Blonde woman talking to the phone
-    - title: Conversion uplifts
-      content: Our conversational mobile hub connects augmented clienteling to actionable data resulting in unprecedented transaction uplifts. We help where it typically gets messy.
+    - title: Sales conversion
+      content: We connect customers with sales advisors via video, messaging and curated digital experiences to personalize sales.
       image:
         src: "/images/about/counter2.jpg"
         alt: Payment system
@@ -74,7 +73,7 @@ counterGallery:
         src: "/images/about/counter2.jpg"
         alt: Payment system
     - title: Customer lifetime value
-      content: We magnify inspiring communications between companies and customers to foster long-lasting loyalty and advocacy.
+      content: We increase customer satisfaction and net promoter scores leading to more sales.
       image:
         src: "/images/about/counter3.jpg"
         alt: Two women laughing at the meeting
@@ -85,14 +84,6 @@ teamSection:
   id: team-section
   title: The team
   copy: "Our teams are headquartered in the Silicon Valley and Paris to offer the best of both worlds to our clients: the chemistry of visionary tech experts and creative experience makers. Where BSPK brings Logic and Magic together."
-  ceo:
-    image:
-      src: "/images/about/ZornitzaStefanova.jpg"
-      alt: "Zornitza Stefanova"
-    name: "Zornitza Stefanova"
-    position: "Founder and CEO"
-  video: "/videos/BSPK_About_Workshop.mp4"
-  videoMobile: "/videos/BSPK_About_Workshop_Mobile.mp4"
 coverSection:
   id: global-section
   image: "/images/about/AboutCity.jpg"
