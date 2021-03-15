@@ -30,7 +30,8 @@
           tagStyle="h1"
         />
         <p
-          v-for="paragraph of $frontmatter.visionSection.content"
+          v-for="(paragraph, index) of $frontmatter.visionSection.content"
+          :key="index"
         >
           {{ paragraph }}
         </p>

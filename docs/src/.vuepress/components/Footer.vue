@@ -15,7 +15,7 @@
               Home
             </h2>
             <ul>
-              <li v-for="navElement of $themeConfig.nav">
+              <li v-for="(navElement, index) of $themeConfig.nav" :key="index">
                 <router-link
                   :to="navElement.link"
                 >

@@ -3,7 +3,7 @@ title: Customers
 permalink: /customers
 intro:
   title: Our customers
-  content: Brands and retailers are monetizing their customer experiences with BSPK
+  content: Companies are using BSPK to develop and implement their client engagement and loyalty-building strategies
   id: customers-section
 alignedImage:
   src: "/images/customers/BSPK_Customer.jpg"
@@ -28,9 +28,9 @@ alignedCarousel:
     alt: 'Art gallery'
   title: Who is BSPK for
   slides:
-    - Verticals putting emotion-based relationships at the heart of their USP for long-term profit & CLVT
-    - Businesses looking to optimize their customer engagement strategy with a playful and human touch
-    - Companies seeking to quickly adopt modern technology and be ahead of the game
+    - Companies putting emotion-based relationships at the heart of their business
+    - Businesses looking to grow sales by engaging customers at the right time with the right message
+    - Forward-looking teams using technology to achieve greater customer satisfaction and improved business results
     - (r)e-tailers and service providers of all sizes across a wide range of industries
     - Brands competing with digital players for more direct connections with customers (online/offline)
     - E-com platforms wanting to differentiate their online experience with deeper human interactions
