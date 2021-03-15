@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+Sitemap: https:/domagalahanna.github.io/bspk//sitemap.xml
+Host: https://domagalahanna.github.io
