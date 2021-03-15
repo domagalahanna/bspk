@@ -3,7 +3,7 @@ title: Technology
 permalink: /technology
 intro:
   title: All-in-one solution
-  content: The most user-centric engagement hub created by customers for customers, and engineered for enterprise
+  content: The most user-centric engagement hub created by customers for customers, and engineered for success
   id: solution-section
 alignedImage:
   src: "/images/technology/BSPK_Technology_Main.jpg"
@@ -15,39 +15,32 @@ features:
       title: Interface
       list:
         - Simple, user-friendly, fun
-        - Intuitive and responsive
+        - Intuitive, visual, responsive
         - Omni-ready and agile
         - Works globally
     - icon: "/images/icons/chat-circle-text-light.png"
       title: Interactions
       list:
-        - "Multi-channel: SMS, WhatsApp, WeChat, Email..."
+        - "Multi-channel: SMS, WhatsApp, Apple Messages, Line, Email..."
         - Rich visual communications (chat & video)
-        - Authentic + control of image
+        - Implement and control a true brand image
     - icon: "/images/icons/rocket-launch-light.png"
       title: Integration
       list:
-        - Easy and fast integration in clients’ ecosystem (I.T, CRM...)
-        - Dynamic customer and product segmentation
+        - Stand-alone or integrated, BSPK is easy to launch
+        - Dynamic customer and product search
         - Progressive and evolutive
 counterGallery:
   id: counter-section
-  title: By the way - our technology delivers humanity, so let’s be clear…
   subtitle: Functionalities
-  intro:
-    - We are not an AI resource 
-    - We are not a CRM tool 
-    - We are not bots  
-  video:
-    mobile: "/videos/BSPK_Technology_Mobile.mp4"
-    desktop: "/videos/BSPK_Technology.mp4"
   sections:
     - title: Customer knowledge
       content: 
-        - Purchase history and intent
-        - Segmentation and classification
+        - Enriched CRM information
+        - Micro-segmentation based on client history and purchase intent
+        - Precision targeting
+        - Client feedback
         - Wishlist
-        - And much more...
       image:
         src: "/images/technology/counter1.jpg"
         alt: Blonde woman talking to the phone
@@ -56,10 +49,11 @@ counterGallery:
         alt: Blonde woman talking to the phone
     - title: Customer management
       content: 
-        - Tasks and appointments 
+        - Tasks / To do lists
+        - Calendar / appointments
         - Reminders
-        - Metrics
-        - And much more...
+        - Reporting & metrics
+        - Stand-alone or connected to your existing CRM
       image:
         src: "/images/technology/counter2.jpg"
         alt: Payment system
@@ -69,9 +63,10 @@ counterGallery:
     - title: Customer engagement
       content: 
         - User journey curation + tracking
-        - Instant messaging (SMS, WhatsApp, WeChat, Email...)
-        - Visual communications
-        - And much more...
+        - Instant messaging (SMS, Apple Messages, Line, WhatsApp, Email...)
+        - Ensure client contact at the right time for the right reason
+        - Never miss a sale
+        - Omni-channel selling features (incl. ADYEN checkout Pay by Link)
       image:
         src: "/images/technology/counter3.jpg"
         alt: Payment system
@@ -79,11 +74,12 @@ counterGallery:
         src: "/images/technology/counter3.jpg"
         alt: Blonde woman talking to the phone
     - title: Product management
-      content: 
-        - Instant product availability scan 
+      content:
+        - Real-time product availability scan
+        - Product integration in metrics
         - Access to catalogue imagery
         - Delivery planning
-        - And much more...
+        - Pick list
       image:
         src: "/images/technology/counter4.jpg"
         alt: Payment system

@@ -5,7 +5,7 @@
     :id="$frontmatter.counterGallery.id"
   >
     <header
-      v-if="$frontmatter.counterGallery.title && $frontmatter.counterGallery.intro"
+      v-if="$frontmatter.counterGallery.title || $frontmatter.counterGallery.subtitle || $frontmatter.counterGallery.intro"
       class="counter-gallery__header container"
     >
       <div data-scroll>
@@ -55,6 +55,7 @@
     <article
       v-for="(section, index) of $frontmatter.counterGallery.sections"
       class="counter-section container grid-container"
+      :key="index"
     >
       <div 
         class="counter-section__image"
